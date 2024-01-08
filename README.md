@@ -1,15 +1,13 @@
 
- <img src="./src/assets/images/banner.jpg"> </img>
+ <img src="#"> </img>
  
-  <h1 align="center" id="top">Eventum - Front end</h1>
+  <h1 align="center" id="top">Fincas Vlc - Front end</h1>
 
-
-Eventum is an application designed to optimize and automate the process of creating, managing, and confirming events at **Marina de Empresas**. Its main purpose is to improve operational efficiency and provide a more convenient user experience for participants who wish to attend our events.
-At Marina de Empresas, we are committed to delivering outstanding event experiences. Eventum is a testament to our dedication to operational excellence and creating a user-centric approach to event management.
-
+## 1. Introduction
+This project is a database designed with well-defined relationships between tables, and a subsequently developed REST API that meet the next objectives and specified requirements for the management of the Consejo General de Colegios de Administradores de Fincas, with Node.js and Express technologies, coupled with MongoDB/Mongoose, a robust REST API for an online management application.
+Opted for the Model-View-Controller (MVC) pattern in structuring our project, driven by the aim of achieving an efficient and visually organized application. The MVC architecture divides our system into three key components: the Model, responsible for managing data and implementing business logic; the View, handling visual representation and user interface; and the Controller, managing control logic and user interaction.
 
 ## User Benefits
-
 
 - Improved Accessibility: Participants have easy access to event information, reducing friction in the registration process.
 
@@ -25,7 +23,7 @@ At Marina de Empresas, we are committed to delivering outstanding event experien
 
 
 
-  <img src="./src/assets/images/GifReadme.gif"> </img>
+  <img src="#"> </img>
   
 
 
@@ -48,7 +46,7 @@ At Marina de Empresas, we are committed to delivering outstanding event experien
 The choice to structure our project using the Model-View-Controller (MVC) pattern is based on the pursuit of an efficient and visually organized approach for our application. MVC divides the application into three core components: the Model, responsible for data management and business logic; the View, handling visual representation and the user interface; and the Controller, managing control logic and user interaction. This separation of responsibilities not only simplifies collaborative development but also enhances maintainability by enabling developers to work on specific parts of the project without affecting the whole. Furthermore, it facilitates code reuse, potentially speeding up development, and ensures that the application is scalable and adaptable as it evolves, resulting in a more robust and visually appealing final product. Ultimately, the choice of MVC contributes to a more efficient and successful development experience for our project.
 
 
-<img src="./src/assets/images/admin1.png"> </img> ||| <img src="./src/assets/images/dashbord2.png"> </img>
+<img src="#"> </img> ||| <img src="#"> </img>
 
 ## 2 - Installation
 
@@ -219,7 +217,7 @@ npm install sass
 
 <h1>
 
-  <img src="./src/assets/images/imgfront.readme.png"> </img>
+  <img src="#"> </img>
   
 </h1>
 
@@ -238,7 +236,7 @@ npm install cypress
 
 <h1>
 
-  <img src="./src/assets/images/devDependenciess.png"> </img>
+  <img src="#"> </img>
   
 </h1>
 
@@ -305,11 +303,9 @@ The project must have an .env file, which will contain all the environment varia
 
 <h1>
 
-  <img src="./src/assets/images/img.png"> </img>
+  <img src="#"> </img>
   
 </h1>
-
-
 
 
 <div align="right">
@@ -402,20 +398,6 @@ To deploy your React and Redux application to a production server, you'll need t
 
 --
 
-# Cybersecurity Overview:
- 
-- Comprehensive monitoring and analysis of security-related data.
-- Pentesting: Our project involves penetration testing using tools to assess vulnerabilities.
-- Code Auditing: Our code undergoes thorough audits using SonarQube to ensure code quality and security.
-- Security by Design: We emphasize security from the design phase, encompassing protocols, password and port configurations, library versions, and user permissions and privileges.
-
-<img align="center" height="50" width="50" src="https://www.spiderfoot.net/wp-content/uploads/2020/05/largeLogo.png">
-<img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/508/508250.png">
-<img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/4249/4249749.png">
-<img align="center" height="50" width="50" src="https://cdn.worldvectorlogo.com/logos/sonarqube.svg">
-
---
-
 # Overview UX/UI:
 
 
@@ -428,9 +410,6 @@ To deploy your React and Redux application to a production server, you'll need t
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/552/552220.png">
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/1203/1203887.png">
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/7514/7514332.png">
-
-      
-
 
 
 <div align="right">
