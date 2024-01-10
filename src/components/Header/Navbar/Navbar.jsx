@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ user, onSearchTypeChange }) => {
   if (!user) {
-    return "Loading...";
+    return "Navbar";
   }
   const location = useLocation();
   const [showHomeMenu, setShowHomeMenu] = useState(false);
@@ -45,7 +45,7 @@ const Navbar = ({ user, onSearchTypeChange }) => {
     return (
       <header>
         <section>
-          <h4>ARTICIPE</h4>
+          <h4>Consejo General de Colegios de Administradores de Fincas</h4>
         </section>
         <section>
           <span className="material-symbols-outlined">favorite</span>
@@ -82,7 +82,7 @@ const Navbar = ({ user, onSearchTypeChange }) => {
     return (
       <header>
         <section>
-          <h4>ARTICIPE</h4>
+          <h4>Consejo General de Colegios de Administradores de Fincas</h4>
         </section>
         <section>
           <span className="material-symbols-outlined">favorite</span>
