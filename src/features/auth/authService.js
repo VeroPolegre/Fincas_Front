@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3001/users";
+const API_URL = "https://fincas-back-dev-kgax.1.us-1.fl0.io/users";
 
 const register = async (userData) => {
   const res = await axios.post(API_URL + "/register", userData);

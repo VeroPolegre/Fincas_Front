@@ -63,7 +63,7 @@ const Login = () => {
           htmlFor="usernameFormLogin"
           className="material-symbols-outlined"
         >
-          person
+          correo electrónico
         </label>
         <input
           type="text"
@@ -81,7 +81,7 @@ const Login = () => {
           htmlFor="passwordFormLogin"
           className="material-symbols-outlined"
         >
-          lock
+          contraseña
         </label>
         <input
           type="password"
