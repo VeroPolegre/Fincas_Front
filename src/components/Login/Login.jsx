@@ -20,7 +20,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      navigate("/");
+      navigate("/profile");
     }
     if (isError) {
       setLoginError("Email o contraseña incorrectos");
@@ -99,8 +99,8 @@ const Login = () => {
       {loginError && <p>{loginError}</p>}
 
       <p className="redirect-message">
-        No estas registrado?<br></br>
-        <a href="../register">Registrate aquí</a>
+        ¿No estás registrado?<br></br>
+        <a href="./">Registrate aquí</a>
       </p>
     </form>
   );

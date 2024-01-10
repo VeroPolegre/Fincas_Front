@@ -57,7 +57,8 @@ const Register = () => {
     if (!password) {
       validationErrors.password = "Introduzca una contraseña";
     } else if (password.length < 6) {
-      validationErrors.password = "La contraseña debe contener al menos 6 caracteres";
+      validationErrors.password =
+        "La contraseña debe contener al menos 6 caracteres";
     }
     if (!password2) {
       validationErrors.password2 = "Porfavor, repita su contraseña";
@@ -162,8 +163,8 @@ const Register = () => {
       {registerError && <p>{registerError}</p>}
 
       <p className="redirect-message">
-        Ya estas registrado?<br></br>
-        <a href="../login">Iniciar sesión</a>
+        ¿Ya estás registrado?<br></br>
+        <a href="/login">Iniciar sesión</a>
       </p>
     </form>
   );
