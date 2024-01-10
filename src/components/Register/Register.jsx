@@ -1,31 +1,35 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { register, login, reset } from "../../features/auth/authSlice";
+import { register, reset } from "../../features/auth/authSlice";
 import "./Register.scss";
 import { useNavigate } from "react-router-dom";
-import "./Register.scss";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-
+    name: "",
+    surname: "",
     email: "",
     password: "",
+    password2: "",
   });
-  const { email, password } = formData;
+  const { name, surname, email, password, password2 } = formData;
   const { isSuccess, message, isError } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [errors, setErrors] = useState({});
-  const [loginError, setLoginError] = useState(null);
+  const [registerError, setRegisterError] = useState(null);
 
   useEffect(() => {
     if (isSuccess) {
       navigate("/");
     }
     if (isError) {
-      setLoginError("Email o contraseña incorrectos");
+      setRegisterError("Correo electrónico o contraseña incorrectos");
+      setTimeout(() => {
+        setRegisterError(null);
+      }, 2000);
     }
     dispatch(reset());
   }, [isSuccess, message, isError]);
@@ -41,97 +45,121 @@ const Register = () => {
     e.preventDefault();
 
     const validationErrors = {};
+    if (!name) {
+      validationErrors.name = "Introduzca su nombre";
+    }
+    if (!surname) {
+      validationErrors.surname = "Introduzca su apellido";
+    }
     if (!email) {
       validationErrors.email = "Introduzca una dirección de correo electrónico";
     }
     if (!password) {
       validationErrors.password = "Introduzca una contraseña";
+    } else if (password.length < 6) {
+      validationErrors.password = "La contraseña debe contener al menos 6 caracteres";
+    }
+    if (!password2) {
+      validationErrors.password2 = "Porfavor, repita su contraseña";
+    } else if (password !== password2) {
+      validationErrors.password2 = "Las contraseñas no coinciden";
     }
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
+      setTimeout(() => {
+        setErrors({});
+      }, 2000);
       return;
     }
 
     setErrors({});
-    setLoginError(null);
-    dispatch(login(formData));
+    setRegisterError(null);
+    dispatch(register(formData));
   };
   return (
     <form onSubmit={onSubmit} className="form-register">
       <div className="custom-label-input">
-        <label
-          htmlFor="usernameFormLogin"
-          className="material-symbols-outlined"
-        >
+        {/* <label htmlFor="nameFormRegister" className="material-symbols-outlined">
           nombre
-        </label>
+        </label> */}
         <input
           type="text"
-          name="nombre"
+          name="name"
           placeholder="nombre"
           value={name}
           onChange={onChange}
-          id="usernameFormLogin"
+          id="nameFormRegister"
         />{" "}
         {errors.name && <p>{errors.name}</p>}
       </div>
       <div className="custom-label-input">
-        <label
-          htmlFor="nameFormLogin"
-          className="material-symbols-outlined"
-        >
+        {/* <label htmlFor="surnameFormRegister" className="material-symbols-outlined">
           apellido
-        </label>
+        </label> */}
         <input
           type="text"
-          name="apellido"
+          name="surname"
           placeholder="apellido"
-          value={name}
+          value={surname}
           onChange={onChange}
-          id="surnameFormLogin"
+          id="surnameFormRegister"
         />{" "}
         {errors.surname && <p>{errors.surname}</p>}
       </div>
+      <div className="custom-label-input">
+        {/* <label htmlFor="surnameFormRegister" className="material-symbols-outlined">
+          correo electrónico
+        </label> */}
+        <input
+          type="email"
+          name="email"
+          placeholder="correo electrónico"
+          value={email}
+          onChange={onChange}
+          id="emailFormRegister"
+        />{" "}
+        {errors.email && <p>{errors.email}</p>}
+      </div>
 
       <div className="custom-label-input">
-        <label
-          htmlFor="passwordFormLogin"
+        {/* <label
+          htmlFor="passwordFormRegister"
           className="material-symbols-outlined"
         >
           contraseña
-        </label>
+        </label> */}
         <input
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="contraseña"
           value={password}
           onChange={onChange}
-          id="passwordFormLogin"
+          id="passwordFormRegister"
         />{" "}
         {errors.password && <p>{errors.password}</p>}
       </div>
       <div className="custom-label-input">
-        <label
-          htmlFor="passwordFormLogin"
+        {/* <label
+          htmlFor="passwordFormRegister"
           className="material-symbols-outlined"
         >
           repetir contraseña
-        </label>
+        </label> */}
         <input
           type="password"
-          name="password"
-          placeholder="password"
-          value={password}
+          name="password2"
+          placeholder="repetir contraseña"
+          value={password2}
           onChange={onChange}
-          id="password2FormLogin"
+          id="password2FormRegister"
         />{" "}
-        {errors.password && <p>{errors.password}</p>}
+        {errors.password2 && <p>{errors.password2}</p>}
       </div>
 
-      <button type="submit">Iniciar sesión</button>
+      <button type="submit">Registrarse</button>
 
-      {loginError && <p>{loginError}</p>}
+      {registerError && <p>{registerError}</p>}
 
       <p className="redirect-message">
         Ya estas registrado?<br></br>
@@ -140,6 +168,5 @@ const Register = () => {
     </form>
   );
 };
-
 
 export default Register;
