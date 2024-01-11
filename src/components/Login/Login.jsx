@@ -59,16 +59,16 @@ const Login = () => {
   return (
     <form onSubmit={onSubmit} className="form-register">
       <div className="custom-label-input">
-        <label
+        {/* <label
           htmlFor="usernameFormLogin"
           className="material-symbols-outlined"
         >
           correo electrónico
-        </label>
+        </label> */}
         <input
           type="text"
           name="email"
-          placeholder="email"
+          placeholder="correo electrónico"
           value={email}
           onChange={onChange}
           id="usernameFormLogin"
@@ -77,16 +77,16 @@ const Login = () => {
       </div>
 
       <div className="custom-label-input">
-        <label
+        {/* <label
           htmlFor="passwordFormLogin"
           className="material-symbols-outlined"
         >
           contraseña
-        </label>
+        </label> */}
         <input
           type="password"
           name="password"
-          placeholder="password"
+          placeholder="contraseña"
           value={password}
           onChange={onChange}
           id="passwordFormLogin"
