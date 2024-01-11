@@ -10,12 +10,10 @@ const CreateCertificate = () => {
   };
 
   const handleFileChange = (event) => {
-    // Manejar la lógica para el archivo aquí, por ejemplo, guardar en el estado.
     setArchivo(event.target.files[0]);
   };
 
   const handleResumirClick = () => {
-    // Lógica para resumir con el archivo adjunto.
     console.log("Resumiendo con la comunidad:", comunidad, "y el archivo:", archivo);
   };
 
