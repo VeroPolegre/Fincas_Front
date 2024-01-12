@@ -1,20 +1,18 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import Header from "../../components/Header/Header";
+import { uploadImage } from "../../features/certificates/certificateSlice";
 
-const CreateCertificate = () => {
-  const [comunidad, setComunidad] = useState("");
-  const [archivo, setArchivo] = useState(null);
-
-  const handleComunidadChange = (event) => {
-    setComunidad(event.target.value);
-  };
+export default function CreateCertificate() {
+  const dispatch = useDispatch();
+  const [file, setFile] = useState(null);
 
   const handleFileChange = (event) => {
-    setArchivo(event.target.files[0]);
+    setFile(event.target.files[0]);
   };
 
-  const handleResumirClick = () => {
-    console.log("Resumiendo con la comunidad:", comunidad, "y el archivo:", archivo);
+  const handleUploadImage = () => {
+    dispatch(uploadImage(file));
   };
 
   return (
@@ -23,26 +21,14 @@ const CreateCertificate = () => {
       <h1>Actas</h1>
       <form>
         <label>
-          Comunidad:
-          <select value={comunidad} onChange={handleComunidadChange}>
-            <option value="opcion1">Opción 1</option>
-            <option value="opcion2">Opción 2</option>
-            <option value="opcion3">Opción 3</option>
-            <option value="opcion4">Opción 4</option>
-          </select>
-        </label>
-        <br />
-        <label>
           Adjuntar archivo:
           <input type="file" onChange={handleFileChange} />
         </label>
         <br />
-        <button type="button" onClick={handleResumirClick}>
-          Resumir
+        <button type="button" onClick={handleUploadImage}>
+          Resumir acta
         </button>
       </form>
     </>
   );
-};
-
-export default CreateCertificate;
+}
