@@ -24,6 +24,13 @@ const Register = () => {
   useEffect(() => {
     if (isSuccess) {
       navigate("/");
+      setFormData({
+        name: "",
+        surname: "",
+        email: "",
+        password: "",
+        password2: "",
+      });
     }
     if (isError) {
       setRegisterError("Correo electrónico o contraseña incorrectos");

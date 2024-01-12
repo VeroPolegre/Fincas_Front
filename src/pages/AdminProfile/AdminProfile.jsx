@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Header from "../../components/Header/Header";
 
 const AdminProfile = () => {
@@ -13,8 +14,22 @@ const AdminProfile = () => {
     setArchivo(event.target.files[0]);
   };
 
-  const handleResumirClick = () => {
-    console.log("Resumiendo con la comunidad:", comunidad, "y el archivo:", archivo);
+  const handleResumirClick = async () => {
+    try {
+      const formData = new FormData();
+      formData.append("file", archivo);
+      formData.append("upload_preset", "tu_upload_preset_de_cloudinary");
+
+      const cloudinaryResponse = await axios.post(
+        "https://api.cloudinary.com/v1_1/tu_nombre_de_cloudinary/image/upload",
+        formData
+      );
+
+      console.log("Resumiendo con la comunidad:", comunidad);
+      console.log("URL de la imagen:", cloudinaryResponse.data.url);
+    } catch (error) {
+      console.error("Error al subir la imagen a Cloudinary:", error);
+    }
   };
 
   return (
