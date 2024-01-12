@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 
-const CreateCertificate = () => {
+const AdminProfile = () => {
   const [comunidad, setComunidad] = useState("");
   const [archivo, setArchivo] = useState(null);
 
@@ -20,7 +20,7 @@ const CreateCertificate = () => {
   return (
     <>
       <Header />
-      <h1>Actas</h1>
+      <h1>Perfil Admin</h1>
       <form>
         <label>
           Comunidad:
@@ -45,4 +45,4 @@ const CreateCertificate = () => {
   );
 };
 
-export default CreateCertificate;
+export default AdminProfile;
