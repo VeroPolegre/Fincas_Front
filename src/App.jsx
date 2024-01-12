@@ -20,7 +20,7 @@ function App() {
           <Route path="/profile" element={<Profile />}>
             {" "}
           </Route>
-          <Route path="/adminprofile" element={<AdminProfile />}>
+          <Route path="/create-certificate" element={<CreateCertificate />}>
             {" "}
           </Route>
         </Routes>
