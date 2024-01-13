@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, reset } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import iconoCasa from "../../assets/iconoCasa.png";
 import "./Login.scss";
 
 const Login = () => {
@@ -57,52 +58,60 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="form-register">
-      <div className="custom-label-input">
-        {/* <label
+    <>
+      <img src={iconoCasa} alt="iconoCasa" />
+      <h1>Iniciar sesión</h1>
+      <p>
+        Tu vecino de confianza te<br></br>
+        da la bienvenida
+      </p>
+      <form onSubmit={onSubmit} className="form-register">
+        <div className="custom-label-input">
+          {/* <label
           htmlFor="usernameFormLogin"
           className="material-symbols-outlined"
         >
           correo electrónico
         </label> */}
-        <input
-          type="text"
-          name="email"
-          placeholder="correo electrónico"
-          value={email}
-          onChange={onChange}
-          id="usernameFormLogin"
-        />{" "}
-        {errors.email && <p>{errors.email}</p>}
-      </div>
+          <input
+            type="text"
+            name="email"
+            placeholder="correo electrónico"
+            value={email}
+            onChange={onChange}
+            id="usernameFormLogin"
+          />{" "}
+          {errors.email && <p>{errors.email}</p>}
+        </div>
 
-      <div className="custom-label-input">
-        {/* <label
+        <div className="custom-label-input">
+          {/* <label
           htmlFor="passwordFormLogin"
           className="material-symbols-outlined"
         >
           contraseña
         </label> */}
-        <input
-          type="password"
-          name="password"
-          placeholder="contraseña"
-          value={password}
-          onChange={onChange}
-          id="passwordFormLogin"
-        />{" "}
-        {errors.password && <p>{errors.password}</p>}
-      </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="contraseña"
+            value={password}
+            onChange={onChange}
+            id="passwordFormLogin"
+          />{" "}
+          {errors.password && <p>{errors.password}</p>}
+        </div>
 
-      <button type="submit">Iniciar sesión</button>
+        <button type="submit">Iniciar sesión</button>
+        <p>¿Has olvidado tu contraseña?</p>
 
-      {loginError && <p>{loginError}</p>}
+        {loginError && <p>{loginError}</p>}
 
-      <p className="redirect-message">
-        ¿No estás registrado?<br></br>
-        <a href="./">Registrate aquí</a>
-      </p>
-    </form>
+        <p className="redirect-message">
+          ¿Aún no tienes cuenta? <a href="./">Regístrate</a>
+        </p>
+      </form>
+    </>
   );
 };
 
