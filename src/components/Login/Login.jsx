@@ -64,9 +64,9 @@ const Login = () => {
 
   return (
     <>
-      <img src={iconoLogin} alt="iconoLogin" />
+      <img className="iconoLogin" src={iconoLogin} alt="iconoLogin" />
       <h1>Iniciar sesión</h1>
-      <p>
+      <p className="welcome-text">
         Tu vecino de confianza te<br></br>
         da la bienvenida
       </p>
@@ -111,12 +111,14 @@ const Login = () => {
           <img src={iconoCasa} alt="iconoCasa" />
           Iniciar sesión
         </button>
-        <p>¿Has olvidado tu contraseña?</p>
-        <img src={lineaSeparadora} alt="lineaSeparadora" />
+        <p className="forget-pass-txt">¿Has olvidado tu contraseña?</p>
+        <img className="lineaSeparadora" src={lineaSeparadora} alt="lineaSeparadora" />
 
-        <img src={iconoGoogle} alt="iconoGoogle" />
-        <img src={iconoApple} alt="iconoApple" />
-        <img src={iconoFacebook} alt="iconoFacebook" />
+        <div className="rrss-icons">
+          <img src={iconoGoogle} alt="iconoGoogle" />
+          <img src={iconoApple} alt="iconoApple" />
+          <img src={iconoFacebook} alt="iconoFacebook" />
+        </div>
 
         {loginError && <p>{loginError}</p>}
 

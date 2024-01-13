@@ -1,37 +1,71 @@
+:root {
+  --primary-color: #9e303a;
+  --secondary-color: #222b32;
+  --accent-color: #627b90;
+  --text-color: #aeaeae;
+  --background-color: #e8e8e8;
+  --background-button: #fafafa;
+  --black: #0f0f0f;
+  --white: #fdfdfd;
+}
 h1 {
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 35px;
   font-style: normal;
   letter-spacing: -1px;
-  color: #0f0f0f;
+  color: var(--black);
+  margin-left: 20px;
+}
+.welcome-text {
+  margin-left: 20px;
+  margin-top: -22px;
 }
 p {
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
+  margin-bottom: 80px;
 }
 .form-register {
   text-align: center;
 }
 a {
   text-decoration: none;
-  color: #9e303a;
+  color: var(--primary-color);
+}
+.forget-pass-txt {
+  color: var(--text-color);
+  margin-bottom: 50px;
 }
 .login-button {
   display: flex;
-width: 358px;
-padding: 24px 68px;
-align-items: center;
-gap: 14px;
-border-radius: 32px;
-background: #222B32;
-font-size: 22px;
+  width: 358px;
+  padding: 24px 68px;
+  align-items: center;
+  gap: 14px;
+  border-radius: 32px;
+  background: var(--secondary-color);
+  font-size: 22px;
 }
 .custom-label-input input {
+  border: none;
   display: flex;
-  width: 298px;
-  padding: 12px 29px 12px 16px;
+  width: 310px;
+  padding: 22px 29px 18px 16px;
   align-items: flex-start;
   border-radius: 32px;
-  background: #fdfdfd;
+  margin-bottom: 16px;
+  background: var(--white);
+}
+.custom-label-input ::placeholder{
+  color: var(--background-color);
+}
+.redirect-message {
+  color: var(--secondary-color);
+}
+.iconoLogin {
+  margin: 25px 0 0 20px;
+}
+.lineaSeparadora{
+  margin-bottom: 30px;
 }
