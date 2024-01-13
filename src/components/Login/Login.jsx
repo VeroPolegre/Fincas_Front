@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login, reset } from "../../features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import iconoLogin from "../../assets/iconoLogin.png";
 import iconoCasa from "../../assets/iconoCasa.png";
+import lineaSeparadora from "../../assets/lineaSeparadora.png";
+import iconoGoogle from "../../assets/iconoGoogle.png";
+import iconoApple from "../../assets/iconoApple.png";
+import iconoFacebook from "../../assets/iconoFacebook.png";
 import "./Login.scss";
 
 const Login = () => {
@@ -59,7 +64,7 @@ const Login = () => {
 
   return (
     <>
-      <img src={iconoCasa} alt="iconoCasa" />
+      <img src={iconoLogin} alt="iconoLogin" />
       <h1>Iniciar sesión</h1>
       <p>
         Tu vecino de confianza te<br></br>
@@ -102,8 +107,16 @@ const Login = () => {
           {errors.password && <p>{errors.password}</p>}
         </div>
 
-        <button type="submit">Iniciar sesión</button>
+        <button type="submit" className="login-button">
+          <img src={iconoCasa} alt="iconoCasa" />
+          Iniciar sesión
+        </button>
         <p>¿Has olvidado tu contraseña?</p>
+        <img src={lineaSeparadora} alt="lineaSeparadora" />
+
+        <img src={iconoGoogle} alt="iconoGoogle" />
+        <img src={iconoApple} alt="iconoApple" />
+        <img src={iconoFacebook} alt="iconoFacebook" />
 
         {loginError && <p>{loginError}</p>}
 

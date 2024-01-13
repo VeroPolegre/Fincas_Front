@@ -9,9 +9,29 @@ p {
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
-
 }
-.form-register{
-text-align: center;
-
+.form-register {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #9e303a;
+}
+.login-button {
+  display: flex;
+width: 358px;
+padding: 24px 68px;
+align-items: center;
+gap: 14px;
+border-radius: 32px;
+background: #222B32;
+font-size: 22px;
+}
+.custom-label-input input {
+  display: flex;
+  width: 298px;
+  padding: 12px 29px 12px 16px;
+  align-items: flex-start;
+  border-radius: 32px;
+  background: #fdfdfd;
 }
