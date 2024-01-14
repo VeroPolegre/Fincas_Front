@@ -3,10 +3,15 @@ import iconoCasa from "../../../assets/iconoCasa.png";
 import iconoLupa from "../../../assets/iconoLupa.png";
 import iconoCampana from "../../..//assets/iconoCampana.png";
 import iconoUsuario from "../../../assets/iconoUsuario.png";
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <>
-      <img className="iconoCasa" src={iconoCasa} alt="iconoCasa" />
+      <NavLink to="/profile">
+        <img className="iconoCasa" src={iconoCasa} alt="iconoCasa" />
+      </NavLink>
+
       <div className="icons-container">
         <img className="iconoLupa" src={iconoLupa} alt="iconoLupa" />
         <img className="iconoCampana" src={iconoCampana} alt="iconoCampana" />
