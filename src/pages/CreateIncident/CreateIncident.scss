@@ -1,0 +1,147 @@
+.incident-title {
+  color: #0f0f0f;
+
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -1px;
+}
+
+.button-title {
+  color: var(--Colors-Neutros-Black-Normal, #0f0f0f);
+
+  /* Label/Label XL */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-camara {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.camera-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 400px;
+  padding: 56px 32px;
+  border-radius: 32px;
+  background: var(--Colors-Neutros-White-Normal, #fcfcfc);
+  margin: 6px;
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}
+
+.icono-gallery {
+  display: flex;
+  width: 24px;
+  height: 24px;
+}
+
+.gallery-button {
+  display: inline-flex;
+  padding: 56px 28px 56px 40px;
+  margin: 6px;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 32px;
+  background: #fafafa;
+
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}
+
+.icono-text {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-button {
+  display: inline-flex;
+  padding: 56px 40px 56px 40px;
+  align-items: center;
+  gap: 6px;
+
+  border-radius: 32px;
+  background: #fafafa;
+
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}
+
+.icono-audio {
+  display: flex;
+  padding-left: 20px;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-button {
+  display: inline-flex;
+  margin: 4px;
+  padding: 40px 40px 40px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 800px;
+  background: #fafafa;
+
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}
+
+.icono-call {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-button {
+  display: inline-flex;
+  margin-top: 4px;
+  padding: 37px 39px 43px 38px;
+  align-items: center;
+  gap: 12px;
+
+  border-radius: 32px;
+  background: #fafafa;
+
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}
+
+.cancel-button {
+  display: inline-flex;
+  margin-top: 20px;
+  padding: 30px 135px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 32px;
+  background: var(--Colors-Secondary-Light-Blue-Normal, #627b90);
+
+  /* Sombra card */
+  box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+}

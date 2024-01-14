@@ -5,7 +5,8 @@ import Register from "./components/Register/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
-
+import CreateIncident from "./pages/CreateIncident/CreateIncident";
+import "./fonts.scss";
 function App() {
   return (
     <>
@@ -21,6 +22,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/create-certificate" element={<CreateCertificate />}>
+            {" "}
+          </Route>
+          <Route path="/create-incident" element={<CreateIncident />}>
             {" "}
           </Route>
         </Routes>

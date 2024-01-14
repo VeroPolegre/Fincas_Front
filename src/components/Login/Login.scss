@@ -39,8 +39,9 @@ a {
 }
 .login-button {
   display: flex;
-  width: 358px;
-  padding: 24px 68px;
+  width: 370px;
+  height: 80px;
+  padding: 24px 72px;
   align-items: center;
   gap: 14px;
   border-radius: 32px;
@@ -51,13 +52,13 @@ a {
   border: none;
   display: flex;
   width: 310px;
-  padding: 22px 29px 18px 16px;
+  padding: 22px 29px 18px 30px;
   align-items: flex-start;
   border-radius: 32px;
   margin-bottom: 16px;
   background: var(--white);
 }
-.custom-label-input ::placeholder{
+.custom-label-input ::placeholder {
   color: var(--background-color);
 }
 .redirect-message {
@@ -66,6 +67,6 @@ a {
 .iconoLogin {
   margin: 25px 0 0 20px;
 }
-.lineaSeparadora{
+.lineaSeparadora {
   margin-bottom: 30px;
 }
