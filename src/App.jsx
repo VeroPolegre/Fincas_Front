@@ -7,6 +7,7 @@ import Profile from "./pages/Profile/Profile";
 import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
 import CreateIncident from "./pages/CreateIncident/CreateIncident";
 import "./fonts.scss";
+import Incidents from "./pages/Incidents/Incidents";
 function App() {
   return (
     <>
@@ -25,6 +26,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/create-incident" element={<CreateIncident />}>
+            {" "}
+          </Route>
+          <Route path="/incidents" element={<Incidents />}>
             {" "}
           </Route>
         </Routes>
