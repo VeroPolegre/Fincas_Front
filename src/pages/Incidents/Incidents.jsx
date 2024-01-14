@@ -10,18 +10,26 @@ import icono3 from "../../assets/icono3.png";
 import icono4 from "../../assets/icono4.png";
 import atrasIcono from "../../assets/atrasIcono.png";
 const Incidents = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
 
   const handleContinuarClick = () => {
-    // Navigate to "/incident-confirmation" when the button is clicked
     navigate("/incident-confirmation");
+  };
+
+  const handleAtrasIconoClick = () => {
+    navigate("/create-incident");
   };
   return (
     <>
       <Header />
 
       <div className="incident-container">
-        <img src={atrasIcono} alt="atrasIcono" className="atras-icon" />
+        <img
+          src={atrasIcono}
+          alt="atrasIcono"
+          className="atras-icon"
+          onClick={handleAtrasIconoClick}
+        />
         <h1 className="incident-title">Incidencia #1</h1>
         <h3 className="incident-date">19/01/2024</h3>{" "}
         <div className="image-container">
