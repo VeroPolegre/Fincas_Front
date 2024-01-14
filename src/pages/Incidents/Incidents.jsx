@@ -1,5 +1,6 @@
 import React from "react";
 import "./Incidents.scss";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import grieta from "../../assets/grieta.jpg";
 import iconoBaja from "../../assets/iconoBaja.png";
@@ -9,6 +10,12 @@ import icono3 from "../../assets/icono3.png";
 import icono4 from "../../assets/icono4.png";
 import atrasIcono from "../../assets/atrasIcono.png";
 const Incidents = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
+  const handleContinuarClick = () => {
+    // Navigate to "/incident-confirmation" when the button is clicked
+    navigate("/incident-confirmation");
+  };
   return (
     <>
       <Header />
@@ -31,7 +38,7 @@ const Incidents = () => {
           <img src={icono4} alt="icono4" className="icon" />
         </p>
       </div>
-      <div className="next-button">
+      <div className="next-button" onClick={handleContinuarClick}>
         <span className="button-title" style={{ color: "white" }}>
           Continuar
         </span>

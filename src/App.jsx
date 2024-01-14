@@ -8,6 +8,8 @@ import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
 import CreateIncident from "./pages/CreateIncident/CreateIncident";
 import "./fonts.scss";
 import Incidents from "./pages/Incidents/Incidents";
+import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmation";
+import IncidentTracking from "./pages/IncidentTracking/IncidentTracking";
 function App() {
   return (
     <>
@@ -29,6 +31,15 @@ function App() {
             {" "}
           </Route>
           <Route path="/incidents" element={<Incidents />}>
+            {" "}
+          </Route>
+          <Route
+            path="/incident-confirmation"
+            element={<IncidentConfirmation />}
+          >
+            {" "}
+          </Route>
+          <Route path="/incident-tracking" element={<IncidentTracking />}>
             {" "}
           </Route>
         </Routes>
