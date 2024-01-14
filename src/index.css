@@ -1,24 +1,24 @@
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary-color: #9E303A;
-  --secondary-color: #222B32;
-  --accent-color: #627B90;
-  --text-color: #AEAEAE;
-  --background-color: #E8E8E8;
-  --background-button: #FAFAFA;
-
+  --primary-color: #9e303a;
+  --secondary-color: #222b32;
+  --terciary-color: #77242c;
+  --accent-color: #627b90;
+  --text-color: #aeaeae;
+  --background-color: #e8e8e8;
+  --background-button: #fafafa;
 }
 /* 
 a {
