@@ -13,23 +13,21 @@ const Home = () => {
       <div className="buttons-container">
         <div className="incidence-button">
           <div className="icon-container column">
-            <span className="button-title">Incidencias</span>
+            <span className="home-incident-title">Incidencias</span>
             <div>
-            <img
-              className="icono-incidence"
-              src={iconoIncidencia}
-              alt="iconoIncidencia"
+              <img
+                className="icono-incidence"
+                src={iconoIncidencia}
+                alt="iconoIncidencia"
               />
               <h2>0</h2>
-              </div>
+            </div>
           </div>
         </div>
         <div className="create-incidence-button">
           <div className="icon-container">
-            <span className="button-title-white">
-              Crear <br />incidencia
-            </span>
-            {/* <span className="button-title-white">Incidencia</span> */}
+            <h5 className="home-create-incident">Crear </h5>
+            <span className="home-create-incident-subtitle">incidencia</span>
           </div>
         </div>
         <div className="comunity-button">

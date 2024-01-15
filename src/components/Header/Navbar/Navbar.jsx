@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <NavLink to="/profile">
+      <NavLink to="/home">
         <img className="iconoCasa" src={iconoCasa} alt="iconoCasa" />
       </NavLink>
 
