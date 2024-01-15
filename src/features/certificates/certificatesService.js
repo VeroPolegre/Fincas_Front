@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "";
+const API_URL = ""; //data api
 
 const uploadImage = async (base64) => {
   try {
@@ -13,8 +13,8 @@ const uploadImage = async (base64) => {
   }
 };
 
-const certificateService = {
+const certificatesService = {
   uploadImage,
 };
 
-export default certificateService;
+export default certificatesService;
