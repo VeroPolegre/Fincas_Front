@@ -17,7 +17,7 @@
   gap: 1px;
   display: flex;
   flex-wrap: wrap;
-  
+
   div {
     display: inline-flex;
     justify-content: center;
@@ -44,14 +44,14 @@
     box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
     .icono-incidence {
       display: flex;
-      //   width: 24px;
-      //   height: 24px;
     }
     img {
       height: 30px;
     }
     h2 {
       font-size: 40px;
+      font-weight: 500;
+      margin-left: 4px;
     }
   }
   .create-incidence-button {
@@ -66,10 +66,9 @@
     background: #9e303a;
     /* Sombra card */
     box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
-
-    /* Center the content */
     justify-content: center;
     align-items: center;
+
     .home-create-incident-subtitle {
       color: var(--Colors-Neutros-Black-Normal, #fafafa);
       margin-bottom: -28px;
@@ -97,7 +96,7 @@
       letter-spacing: -0.48px;
     }
   }
-  .junta-title-white{
+  .junta-title-white {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #fafafa);
@@ -111,7 +110,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .cuota-title{
+  .cuota-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #000000);
@@ -125,7 +124,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .vote-title{
+  .vote-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #000000);
@@ -138,8 +137,8 @@
     font-weight: 400;
     line-height: 120%;
     letter-spacing: -0.48px;
-}
-  .num-junta-title-white{
+  }
+  .num-junta-title-white {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #fafafa);
@@ -147,13 +146,13 @@
     margin-right: -100px;
     margin-left: -65px;
     font-family: Montserrat;
-    font-size: 44;
+    font-size: 44px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .num-couta-title{
+  .num-couta-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #0d0d0d);
@@ -163,11 +162,11 @@
     font-family: Montserrat;
     font-size: 44;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .num-vote-title{
+  .num-vote-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #0d0d0d);
@@ -177,11 +176,11 @@
     font-family: Montserrat;
     font-size: 44;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 500;
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .enero-title-white{
+  .enero-title-white {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #fafafa);
@@ -195,7 +194,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .ano-title{
+  .ano-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #060606);
@@ -209,7 +208,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .pending-title{
+  .pending-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #060606);
@@ -223,7 +222,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .reserve-title{
+  .reserve-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #060606);
@@ -237,7 +236,7 @@
     line-height: 120%;
     letter-spacing: -0.48px;
   }
-  .places-title{
+  .places-title {
     display: flex;
     align-items: center;
     color: var(--Colors-Neutros-Black-Normal, #060606);
@@ -259,7 +258,7 @@
     margin-bottom: 6px;
     margin-top: 2px;
     margin-left: 6px;
-    
+
     align-items: center;
     gap: 12px;
     border-radius: 32px;

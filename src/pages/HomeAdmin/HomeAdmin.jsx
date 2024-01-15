@@ -13,23 +13,20 @@ const HomeAdmin = () => {
       <div className="buttons-container-admin">
         <div className="incidence-button-admin">
           <div className="icon-container-admin column">
-            <span className="home-incident-title-admin">Incidencias</span>
+            <span className="home-incident-title-admin">Comunidades</span>
             <div>
-              <img
-                className="icono-incidence-admin"
-                src={iconoIncidencia}
-                alt="iconoIncidencia"
-              />
-              <h2>0</h2>
+              <h2
+                style={{ fontSize: "50px", marginTop: "65px", fontWeight: 500 }}
+              >
+                41
+              </h2>
             </div>
           </div>
         </div>
         <div className="create-incidence-button-admin">
           <div className="icon-container-admin">
-            <h5 className="home-create-incident-admin">Crear </h5>
-            <span className="home-create-incident-subtitle-admin">
-              incidencia
-            </span>
+            <h5 className="home-create-incident-admin">Crear acta</h5>
+            {/* <span className="home-create-incident-subtitle-admin">acta</span> */}
           </div>
         </div>
         <div className="comunity-button-admin">
