@@ -3,8 +3,12 @@ import Header from "../../components/Header/Header";
 import "./HomeUser.scss";
 import iconoIncidencia from "../../assets/iconoIncidencia.png";
 import iconoComunidad from "../../assets/iconoComunidad.png";
-
+import { useNavigate } from "react-router-dom";
 const HomeUser = () => {
+  const navigate = useNavigate();
+  const handleCreateIncidentClick = () => {
+    navigate("/create-incident");
+  };
   return (
     <>
       <Header />
@@ -24,7 +28,10 @@ const HomeUser = () => {
             </div>
           </div>
         </div>
-        <div className="create-incidence-button">
+        <div
+          className="create-incidence-button "
+          onClick={handleCreateIncidentClick}
+        >
           <div className="icon-container">
             <h5 className="home-create-incident">Crear </h5>
             <span className="home-create-incident-subtitle">incidencia</span>

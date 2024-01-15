@@ -3,7 +3,7 @@ import certificatesService from "./certificatesService";
 
 const initialState = {
   loading: false,
-  imageUrl: "", // Change from "url" to "imageUrl" for clarity
+  imageUrl: "",
   isError: false,
   isSuccess: false,
   message: "",

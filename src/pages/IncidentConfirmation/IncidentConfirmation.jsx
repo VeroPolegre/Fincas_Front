@@ -3,9 +3,8 @@ import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router-dom";
 
 const IncidentConfirmation = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
   const handleContinuarClick = () => {
-    // Navigate to "/incident-confirmation" when the button is clicked
     navigate("/incident-tracking");
   };
   return (

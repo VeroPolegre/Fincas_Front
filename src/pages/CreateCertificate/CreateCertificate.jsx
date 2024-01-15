@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Header from "../../components/Header/Header";
 import { uploadImage } from "../../features/certificates/certificatesSlice";
+import "./CreateCertificate.scss";
 
 export default function CreateCertificate() {
   const dispatch = useDispatch();

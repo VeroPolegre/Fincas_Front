@@ -11,6 +11,7 @@ import "./fonts.scss";
 import Incidents from "./pages/Incidents/Incidents";
 import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmation";
 import IncidentTracking from "./pages/IncidentTracking/IncidentTracking";
+import HomeAdmin from "./pages/HomeAdmin/HomeAdmin";
 function App() {
   return (
     <>
@@ -44,6 +45,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/home-user" element={<HomeUser />}>
+            {" "}
+          </Route>
+          <Route path="/home-admin" element={<HomeAdmin />}>
             {" "}
           </Route>
         </Routes>

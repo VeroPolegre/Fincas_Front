@@ -16,7 +16,9 @@ const Login = () => {
     password: "",
   });
   const { email, password } = formData;
-  const { isSuccess, message, isError } = useSelector((state) => state.auth);
+  const { isSuccess, message, isError, user, auth } = useSelector(
+    (state) => state.auth
+  );
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -26,14 +28,32 @@ const Login = () => {
 
   useEffect(() => {
     if (isSuccess) {
-      navigate("/profile");
+      selectRole();
     }
     if (isError) {
       setLoginError("Email o contraseña incorrectos");
     }
     dispatch(reset());
-  }, [isSuccess, message, isError]);
+  }, [isSuccess, message, isError, navigate, dispatch]);
 
+  const selectRole = () => {
+    if (auth !== null) {
+      const { role } = user;
+      if (role === "admin") {
+        setTimeout(() => {
+          navigate("/home-admin", {
+            replace: true,
+          });
+        }, 1000);
+      } else {
+        setTimeout(() => {
+          navigate("/home-user", {
+            replace: true,
+          });
+        }, 1000);
+      }
+    }
+  };
   const onChange = (e) => {
     setFormData({
       ...formData,
@@ -72,12 +92,6 @@ const Login = () => {
       </p>
       <form onSubmit={onSubmit} className="form-register">
         <div className="custom-label-input">
-          {/* <label
-          htmlFor="usernameFormLogin"
-          className="material-symbols-outlined"
-        >
-          correo electrónico
-        </label> */}
           <input
             type="text"
             name="email"
@@ -90,12 +104,6 @@ const Login = () => {
         </div>
 
         <div className="custom-label-input">
-          {/* <label
-          htmlFor="passwordFormLogin"
-          className="material-symbols-outlined"
-        >
-          contraseña
-        </label> */}
           <input
             type="password"
             name="password"
@@ -112,7 +120,11 @@ const Login = () => {
           Iniciar sesión
         </button>
         <p className="forget-pass-txt">¿Has olvidado tu contraseña?</p>
-        <img className="lineaSeparadora" src={lineaSeparadora} alt="lineaSeparadora" />
+        <img
+          className="lineaSeparadora"
+          src={lineaSeparadora}
+          alt="lineaSeparadora"
+        />
 
         <div className="rrss-icons">
           <img src={iconoGoogle} alt="iconoGoogle" />
