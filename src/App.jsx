@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
 import CreateIncident from "./pages/CreateIncident/CreateIncident";
-import Home from "./pages/Home/Home";
+import HomeUser from "./pages/HomeUser/HomeUser";
 import "./fonts.scss";
 import Incidents from "./pages/Incidents/Incidents";
 import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmation";
@@ -43,7 +43,7 @@ function App() {
           <Route path="/incident-tracking" element={<IncidentTracking />}>
             {" "}
           </Route>
-          <Route path="/home" element={<Home />}>
+          <Route path="/home-user" element={<HomeUser />}>
             {" "}
           </Route>
         </Routes>

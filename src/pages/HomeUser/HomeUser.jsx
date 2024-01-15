@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "../../components/Header/Header";
-import "./Home.scss";
+import "./HomeUser.scss";
 import iconoIncidencia from "../../assets/iconoIncidencia.png";
 import iconoComunidad from "../../assets/iconoComunidad.png";
 
-const Home = () => {
+const HomeUser = () => {
   return (
     <>
       <Header />
@@ -37,15 +37,15 @@ const Home = () => {
               src={iconoComunidad}
               alt="iconoComunidad"
             />
-            <span className="button-title-white">Mi Comunidad</span>
+            <span className="button-comunity-title-white">Mi Comunidad</span>
           </div>
         </div>
 
         <div className="junta-button">
           <div className="icon-container">
-            <span className="button-title-white">Junta</span>
+            <span className="junta-title-white">Junta</span>
             <span className="button-title-white custom-size-junta">21</span>
-            <span className="button-title-white">Enero</span>
+            <span className="enero-title-white">Enero</span>
           </div>
         </div>
         <div className="cuota-button">
@@ -75,4 +75,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeUser;
