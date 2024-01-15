@@ -1,0 +1,229 @@
+.welcome-title {
+  color: #0f0f0f;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+.title-adress {
+  margin-left: 25px;
+}
+.buttons-container {
+  margin-top: 40px;
+  gap: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  div {
+    display: inline-flex;
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+    img{
+        height: 15px;
+    }
+    
+  }
+  .incidence-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 32px;
+    background: var(--Colors-Neutros-White-Normal, #fcfcfc);
+    margin: 6px;
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-incidence {
+      display: flex;
+    //   width: 24px;
+    //   height: 24px;
+    }
+     img{
+        height: 30px;
+    }
+    h2{
+     font-size: 40px;   
+    }
+   
+  }
+  .create-incidence-button {
+    display: inline-flex;
+    margin: 4px;
+    width: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 800px;
+    background: #9e303a;
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+  }
+  .comunity-button {
+    display: flex;
+    width: 360px;
+    height: 120px;
+    margin: 6px;
+    align-items: center;
+    gap: 12px;
+    border-radius: 32px;
+    background: #222b32;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-comunity {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .junta-button {
+    display: inline-flex;
+    width: 150px;
+    align-items: center;
+    gap: 6px;
+    border-radius: 32px;
+    background: #627b90;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-junta {
+      display: flex;
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .cuota-button {
+    display: inline-flex;
+    justify-content: center;
+    height: 149px;
+    width: 222px;
+    align-items: center;
+    width: 215px;
+
+    border-radius: 32px;
+    background: #fafafa;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-cuota {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .reservar-button {
+    display: inline-flex;
+    justify-content: center;
+    height: 149px;
+    width: 222px;
+    align-items: center;
+    width: 215px;
+
+    border-radius: 32px;
+    background: #fafafa;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-reservar {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .votacion-button {
+    display: inline-flex;
+    margin: 4px;
+    width: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 800px;
+    background: #fafafa;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-votacion {
+      display: flex;
+      padding-left: 20px;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+   
+  }
+
+  .cancel-button {
+    display: inline-flex;
+    margin-top: 20px;
+    width: 374px;
+    height: 91px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 32px;
+    background: var(--Colors-Secondary-Light-Blue-Normal, #627b90);
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+  }
+}
+
+.button-title {
+  color: var(--Colors-Neutros-Black-Normal, #0f0f0f);
+  margin-bottom: 8px;
+  /* Label/Label XL */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+.button-title-white {
+  color: var(--Colors-Neutros-Black-Normal, #fafafa);
+  margin-bottom: 8px;
+  /* Label/Label XL */
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  //   flex-direction: column;
+  align-items: center;
+}
+.custom-size-junta {
+  font-size: 44px;
+}
+.custom-size-cuota {
+  font-size: 44px;
+}
+.custom-size-votacion {
+  font-size: 44px;
+}
+.column {
+    flex-direction: column;
+    // span{
+    //     height: 30px;
+    }
+  

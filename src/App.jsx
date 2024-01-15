@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
 import CreateIncident from "./pages/CreateIncident/CreateIncident";
+import Home from "./pages/Home/Home";
 import "./fonts.scss";
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/create-incident" element={<CreateIncident />}>
+            {" "}
+          </Route>
+          <Route path="/home" element={<Home />}>
             {" "}
           </Route>
         </Routes>
