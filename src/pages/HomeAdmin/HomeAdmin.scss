@@ -35,7 +35,6 @@
     justify-content: center;
     width: 200px;
     text-align: center;
-    margin: auto;
     max-width: 400px;
     border-radius: 32px;
     background: var(--Colors-Neutros-White-Normal, #fcfcfc);
@@ -65,7 +64,7 @@
     /* Sombra card */
     box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 
     .home-create-incident-subtitle-admin {
       color: var(--Colors-Neutros-Black-Normal, #fafafa);
@@ -89,8 +88,8 @@
       font-family: Montserrat;
       font-size: 24px;
       font-style: normal;
-      font-weight: 400;
-      line-height: 120%;
+      font-weight: 300;
+      line-height: 1;
       letter-spacing: -0.48px;
     }
   }
@@ -254,9 +253,8 @@
     width: 150px;
     height: 150px;
     margin-bottom: 6px;
-    margin-top: 2px;
+    margin-top: 6px;
     margin-left: 6px;
-
     align-items: center;
     gap: 12px;
     border-radius: 32px;
@@ -273,10 +271,10 @@
     display: inline-flex;
     width: 150px;
     align-items: center;
-    margin-left: 4px;
+    margin-left: 6px;
     gap: 6px;
     border-radius: 32px;
-    background: #627b90;
+    background: white;
 
     /* Sombra card */
     box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
@@ -286,26 +284,32 @@
       height: 24px;
     }
   }
-  // .junta-title-white {
-  //   color: var(--Colors-Neutros-Black-Normal, #fafafa);
-  //   margin-bottom: 8px;
-  //   /* Label/Label XL */
-  //   font-family: Montserrat;
-  //   font-size: 24px;
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   line-height: 120%; /* 28.8px */
-  //   letter-spacing: -0.48px;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+  .calendario-admin {
+    display: inline;
+    width: 150px;
+    align-items: center;
+    margin-left: 6px;
+    gap: 6px;
+    border-radius: 32px;
+    background: white;
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .icono-calendario {
+      width: 34px;
+      height: 34px;
+      margin-top: 28px;
+      margin-left: 28px;
+    }
+  }
   .cuota-button-admin {
     display: inline-flex;
     margin-left: 6px;
+    margin-top: 6px;
     justify-content: center;
-    height: 149px;
+    height: 126px;
     align-items: center;
-    width: 206px;
+    width: 360px;
     border-radius: 32px;
     background: #fafafa;
 
@@ -319,19 +323,59 @@
       align-items: center;
     }
   }
-  .reservar-button-admin {
+  .incidencias-title-admin {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 28.8px */
+    letter-spacing: -0.48px;
+    margin-bottom: 50px;
+  }
+  .incidencias-button-admin {
+    display: inline-flex;
+    margin-top: 6px;
+    margin-left: 6px;
+    justify-content: center;
+    height: 149px;
+    align-items: center;
+    width: 180px;
+    border-radius: 32px;
+    background: var(--Colors-Secondary-Light-Blue-Normal, #627b90);
+
+    /* Sombra card */
+    box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+  }
+  .area-button-admin {
     display: inline-flex;
     margin-top: 6px;
     margin-left: 4px;
     justify-content: center;
     height: 149px;
     align-items: center;
-    width: 215px;
+    width: 176px;
     border-radius: 32px;
     background: #fafafa;
 
     /* Sombra card */
     box-shadow: 0px 2px 8px 0px rgba(71, 84, 103, 0.05);
+    .area-title-admin {
+      font-family: Montserrat;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%; /* 28.8px */
+      letter-spacing: -0.48px;
+      margin-bottom: 50px;
+    }
+
+    .icono-area {
+      width: 42px;
+      height: 36px;
+      margin-top: 46px;
+      margin-left: -92px;
+      margin-right: 50px;
+    }
+
     .icono-reservar-admin {
       display: flex;
       width: 24px;
@@ -378,26 +422,14 @@
   justify-content: center;
   align-items: center;
 }
-// .button-title-white {
-//   color: var(--Colors-Neutros-Black-Normal, #fafafa);
-//   margin-bottom: 8px;
-//   /* Label/Label XL */
-//   font-family: Montserrat;
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 120%; /* 28.8px */
-//   letter-spacing: -0.48px;
-//   justify-content: center;
-//   align-items: center;
-// }
 
-.button-comunity-title-white-admin {
-  color: var(--Colors-Neutros-Black-Normal, #fafafa);
-  margin-bottom: -8px;
-  /* Label/Label XL */
+.button-comunity-black-admin {
+  color: var(--Colors-Neutros-Black-Normal, #000000);
+  margin-bottom: 70px;
+  margin-left: 5px;
+  margin-right: -92px;
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 28.8px */
@@ -406,8 +438,79 @@
   align-items: center;
 }
 
+.button-comunity-title-black-admin {
+  color: var(--Colors-Neutros-Black-Normal, #000000);
+  margin-top: 30px;
+  /* Label/Label XL */
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-comunity-white-admin {
+  color: var(--Colors-Neutros-Black-Normal, #fafafa);
+  margin-bottom: 70px;
+  margin-left: 16px;
+  margin-right: -80px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+.button-calendario-black-admin {
+  color: var(--Colors-Neutros-Black-Normal, #000000);
+  margin-bottom: 70px;
+  margin-left: 24px;
+  margin-right: -92px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+.button-comunity-title-white-admin {
+  color: var(--Colors-Neutros-Black-Normal, #fafafa);
+  margin-top: 30px;
+  /* Label/Label XL */
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 28.8px */
+  letter-spacing: -0.48px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pendiente-title-admin {
+  color: var(--Colors-Neutros-Black-Normal, #0f0f0f);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+}
+.icono-recibo {
+  width: 24px !important;
+  height: 24px !important;
+  margin-right: 6px;
+}
 .icon-container-admin {
   display: flex;
+
   //   flex-direction: column;
   align-items: center;
 }
