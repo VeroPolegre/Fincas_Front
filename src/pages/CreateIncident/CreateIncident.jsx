@@ -58,7 +58,7 @@ const CreateIncident = () => {
       <h1 className="incident-title">
         Crear <br /> incidencia
       </h1>
-      <div className="buttons-container">
+      <div className="create-incident-buttons-container">
         <button
           className={`camera-button ${
             selectedButtons.includes("camera") ? "selected" : ""
