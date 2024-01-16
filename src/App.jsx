@@ -13,6 +13,7 @@ import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmat
 import IncidentTracking from "./pages/IncidentTracking/IncidentTracking";
 import HomeAdmin from "./pages/HomeAdmin/HomeAdmin";
 import CertificateConfirmation from "./pages/CertificateConfirmation/CertificateConfirmation";
+import SearchComunity from "./pages/SearchComunity/SearchComunity"
 function App() {
   return (
     <>
@@ -52,6 +53,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/certificate-confirmation" element={<CertificateConfirmation />}>
+            {" "}
+          </Route>
+          <Route path="/search-comunity" element={<SearchComunity />}>
             {" "}
           </Route>
         </Routes>
