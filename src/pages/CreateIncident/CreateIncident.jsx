@@ -11,6 +11,7 @@ import iconoAudio from "../../assets/iconoAudio.png";
 import iconoCall from "../../assets/iconoCall.png";
 import { useNavigate } from "react-router-dom";
 import incidentsService from "../../features/incidents/incidentsService";
+import iconoInfo from "../../assets/iconoInfo.png"
 
 const CreateIncident = () => {
   const dispatch = useDispatch();
