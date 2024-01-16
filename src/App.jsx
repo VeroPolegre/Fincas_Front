@@ -15,6 +15,7 @@ import HomeAdmin from "./pages/HomeAdmin/HomeAdmin";
 import CertificateConfirmation from "./pages/CertificateConfirmation/CertificateConfirmation";
 import SearchComunity from "./pages/SearchComunity/SearchComunity";
 import CertificateDetails from "./pages/CertificateDetails/CertificateDetails";
+import SearchComunityDetail from "./pages/SearchComunityDetail/SearchComunityDetail";
 function App() {
   return (
     <>
@@ -63,6 +64,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/search-comunity" element={<SearchComunity />}>
+            {" "}
+          </Route>
+          <Route path="/search-comunity-detail" element={<SearchComunityDetail />}>
             {" "}
           </Route>
         </Routes>
