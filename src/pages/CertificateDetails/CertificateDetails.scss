@@ -1,0 +1,46 @@
+.certificatedetails-container {
+  display: flex;
+  flex-direction: column;
+  .certificatedetails-title {
+    color: var(--Colors-Neutros-Black-Normal, #0f0f0f);
+    margin-left: 40px !important;
+    margin-top: 40px;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -1px;
+  }
+  .atras-icon {
+    width: 15px;
+    height: 21px;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 8px;
+  }
+
+  .certificatedetails-date {
+    width: 240px;
+    height: 20px;
+    margin: 20px;
+    margin-top: -15px;
+    margin-left: 40px !important;
+    color: var(--Colors-Neutros-Black-Normal, #0f0f0f);
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.certificate-details-buttons-container {
+  display: flex;
+  width: 358px;
+  height: 136px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--Colors-Neutros-White-Normal, #fcfcfc);
+}

@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import certificatesService from "../../features/certificates/certificatesService";
 
 export default function CreateCertificate() {
+  const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
 
@@ -26,6 +27,7 @@ export default function CreateCertificate() {
         formData.append("file", selectedFile);
         const res = await certificatesService.uploadFile(formData);
         console.log("File uploaded successfully:", res);
+        navigate("/certificate-details");
       } catch (error) {
         console.error("Error uploading file:", error);
       }
@@ -33,8 +35,6 @@ export default function CreateCertificate() {
       console.error("No file selected");
     }
   };
-
-  const navigate = useNavigate();
 
   const [selectedButtons, setSelectedButtons] = useState([]);
 
