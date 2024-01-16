@@ -12,6 +12,7 @@ import Incidents from "./pages/Incidents/Incidents";
 import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmation";
 import IncidentTracking from "./pages/IncidentTracking/IncidentTracking";
 import HomeAdmin from "./pages/HomeAdmin/HomeAdmin";
+import CertificateConfirmation from "./pages/CertificateConfirmation/CertificateConfirmation";
 function App() {
   return (
     <>
@@ -48,6 +49,9 @@ function App() {
             {" "}
           </Route>
           <Route path="/home-admin" element={<HomeAdmin />}>
+            {" "}
+          </Route>
+          <Route path="/certificate-confirmation" element={<CertificateConfirmation />}>
             {" "}
           </Route>
         </Routes>
