@@ -1,20 +1,42 @@
 import axios from "axios";
 
-const API_URL = ""; //data api
+const API_URL = "http://16.170.236.176";
 
-const uploadImage = async (base64) => {
+const uploadFile = async (formData) => {
   try {
-    const res = await axios.post(`${API_URL}/uploadImage`, {
-      image: base64,
+    const res = await axios.post(`${API_URL}/subir_pdf`, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     });
-    return res.data;
+    return res;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const getResume = async (data) => {
+  try {
+    const res = await axios.get(`${API_URL}/resumen` + data);
+    return res.resumen;
+  } catch (error) {
+    throw error;
+  }
+};
+
+const getAudio = async (base64) => {
+  try {
+    const res = await axios.get(`${API_URL}/audio` + data);
+    return res;
   } catch (error) {
     throw error;
   }
 };
 
 const certificatesService = {
-  uploadImage,
+  uploadFile,
+  getResume,
+  getAudio,
 };
 
 export default certificatesService;

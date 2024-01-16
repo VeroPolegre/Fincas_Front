@@ -1,45 +1,41 @@
 import React, { useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/Header/Header";
-// import { uploadImage } from "../../features/certificates/certificatesSlice";
 import "./CreateCertificate.scss";
-import { setImage, clearImage } from "../../features/incidents/incidentsSlice";
 import iconoCamara from "../../assets/iconoCamara.png";
 import atrasIconoActa from "../../assets/atrasIconoActa.png";
 import iconoGallery from "../../assets/iconoGallery.png";
 import iconoArchivo from "../../assets/iconoArchivo.png";
 import iconoAudio from "../../assets/iconoAudio.png";
 import { useNavigate } from "react-router-dom";
-import incidentsService from "../../features/incidents/incidentsService";
-// import { Button, Modal } from "antd";
+import certificatesService from "../../features/certificates/certificatesService";
 
 export default function CreateCertificate() {
-  // const dispatch = useDispatch();
-  // const [file, setFile] = useState(null);
-
-  // const handleFileChange = (event) => {
-  //   setFile(event.target.files[0]);
-  // };
-
-  // const handleUploadImage = () => {
-  //   dispatch(uploadImage(file));
-  // };
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [selectedFile, setSelectedFile] = useState(null);
   const fileInputRef = useRef(null);
-  const selectedImage = useSelector((state) => state.incidents.selectedImage);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+  const handleFileClick = () => {
+    fileInputRef.current.click();
+  };
+  const handleUploadFile = async () => {
+    if (selectedFile) {
+      try {
+        const formData = new FormData();
+        formData.append("file", selectedFile);
+        const res = await certificatesService.uploadFile(formData);
+        console.log("File uploaded successfully:", res);
+      } catch (error) {
+        console.error("Error uploading file:", error);
+      }
+    } else {
+      console.error("No file selected");
+    }
+  };
+
+  const navigate = useNavigate();
+
   const [selectedButtons, setSelectedButtons] = useState([]);
 
   const handleButtonClick = (buttonType) => {
@@ -50,64 +46,12 @@ export default function CreateCertificate() {
     }
   };
 
-  const handleGalleryButtonClick = () => {
-    fileInputRef.current.click();
-  };
-
-  const handleFileChange = async (event) => {
-    const selectedFile = event.target.files[0];
-
-    try {
-      const imageUrl = await incidentsService.uploadImage(selectedFile);
-      dispatch(setImage(imageUrl));
-    } catch (error) {
-      console.error("Error handling file change:", error);
-    }
-  };
-
-  const handleSubmit = () => {
-    navigate("");
-    if (selectedImage) {
-      console.log("Submitting image:", selectedImage);
-      dispatch(clearImage());
-    } else {
-      console.log("No image selected");
-    }
-  };
-
   const handleAtrasIconoClick = () => {
     navigate("/home-admin");
   };
   return (
     <>
       <Header />
-      {/* 
-      <Button type="secundary" onClick={showModal}>
-        Open Modal
-      </Button>
-      <Modal
-        title="Resumen de acta"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        okButtonProps={{ style: { backgroundColor: "#627b90" } }}
-      >
-        <p>
-          Aprobación de las cuentas del ejercicio anterior y del presupuesto
-          para el presente año. Propuesta de instalación of un ascensor in el
-          edificio. Ruegos y preguntas. Se abre la sesión a las 19:15 horas.
-        </p>
-      </Modal> */}
-      {/* <form>
-        <label>
-          Adjuntar archivo:
-          <input type="file" onChange={handleFileChange} />
-        </label>
-        <br />
-        <button type="button" onClick={handleUploadImage}>
-          Resumir acta
-        </button>
-      </form> */}
       <h1 className="certificate-title">Crear acta</h1>
       <div className="certificate-address">
         <img
@@ -185,7 +129,7 @@ export default function CreateCertificate() {
           className={`certificate-file-button ${
             selectedButtons.includes("call") ? "selected" : ""
           }`}
-          onClick={() => handleButtonClick("call")}
+          onClick={handleFileClick}
           style={{
             background: selectedButtons.includes("call")
               ? "#627B90"
@@ -200,11 +144,17 @@ export default function CreateCertificate() {
             <span className="button-title">Archivo</span>
           </div>
         </button>
+        <input
+          type="file"
+          ref={fileInputRef}
+          style={{ display: "none" }}
+          onChange={handleFileChange}
+        />
         <button
           className={`certificate-next-button ${
             selectedButtons.length > 0 ? "selected" : ""
           }`}
-          onClick={handleSubmit}
+          onClick={handleUploadFile}
           style={{
             background:
               selectedButtons.length > 0
@@ -219,13 +169,6 @@ export default function CreateCertificate() {
           </span>
         </button>
       </div>
-      <input
-        type="file"
-        accept="image/*"
-        style={{ display: "none" }}
-        ref={fileInputRef}
-        onChange={handleFileChange}
-      />
     </>
   );
 }

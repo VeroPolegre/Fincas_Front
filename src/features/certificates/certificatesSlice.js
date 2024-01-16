@@ -2,11 +2,14 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import certificatesService from "./certificatesService";
 
 const initialState = {
-  loading: false,
-  imageUrl: "",
-  isError: false,
-  isSuccess: false,
-  message: "",
+  uploading: false,
+  uploadError: null,
+  uploadResult: null,
+  // loading: false,
+  // imageUrl: "",
+  // isError: false,
+  // isSuccess: false,
+  // message: "",
 };
 
 export const certificatesSlice = createSlice({
@@ -14,36 +17,48 @@ export const certificatesSlice = createSlice({
   initialState,
   reducers: {
     reset: (state) => {
-      state.isError = false;
-      state.isSuccess = false;
-      state.message = "";
+      // state.isError = false;
+      // state.isSuccess = false;
+      // state.message = "";
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(uploadImage.fulfilled, (state, action) => {
-        state.isSuccess = true;
-        state.message = action.payload.message;
-        state.imageUrl = action.payload.imageUrl;
+      .addCase(uploadFile.pending, (state) => {
+        state.uploading = true;
+        state.uploadError = null;
+        state.uploadResult = null;
       })
-      .addCase(uploadImage.rejected, (state, action) => {
-        state.isError = true;
-        state.message = action.payload;
+      .addCase(uploadFile.fulfilled, (state, action) => {
+        state.uploading = false;
+        state.uploadResult = action.payload;
+        // state.isSuccess = true;
+        // state.message = action.payload.message;
+        // state.imageUrl = action.payload.imageUrl;
+      })
+      .addCase(uploadFile.rejected, (state, action) => {
+        state.uploading = false;
+        state.uploadError = action.error.message;
+        // state.isError = true;
+        // state.message = action.payload;
       });
   },
 });
 
 export const { reset } = certificatesSlice.actions;
 
-export const uploadImage = createAsyncThunk(
-  "certificates/uploadImage",
+export const uploadFile = createAsyncThunk(
+  "certificates/uploadFile",
   async (file, thunkAPI) => {
     try {
-      const imageUrl = await certificatesService.uploadImage(file);
-      return { message: "Image uploaded successfully", imageUrl };
+      const res = await certificatesService.uploadFile(file);
+      return res;
     } catch (error) {
       console.error(error);
-      return thunkAPI.rejectWithValue(error.message);
+      return thunkAPI.rejectWithValue({
+        errorMessage: error.message,
+        status: error.status,
+      });
     }
   }
 );
