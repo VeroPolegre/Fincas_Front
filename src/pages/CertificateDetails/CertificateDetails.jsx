@@ -28,7 +28,7 @@ const CertificateDetails = () => {
     navigate("/create-certificate");
   };
   const handleContinuarClick = () => {
-    navigate("/incident-tracking");
+    navigate("/certificate-confirmation");
   };
 
   useEffect(() => {
