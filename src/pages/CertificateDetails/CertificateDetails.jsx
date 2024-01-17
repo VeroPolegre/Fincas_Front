@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getResume } from "../../features/certificates/certificatesSlice";
 import Header from "../../components/Header/Header";
 import atrasIcono from "../../assets/atrasIcono.png";
 import iconoArchivo from "../../assets/iconoArchivo.png";
@@ -6,11 +8,15 @@ import iconoAltavoz from "../../assets/iconoAltavoz.png";
 import iconoEdit from "../../assets/iconoEdit.png";
 import "./CertificateDetails.scss";
 import { useNavigate } from "react-router-dom";
-
-// import { Button, Modal } from "antd";
+import { Modal } from "antd";
+import certificatesService from "../../features/certificates/certificatesService";
 
 const CertificateDetails = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { resumeText } = useSelector((state) => state.certificates);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [resumeText, setResumeText] = useState("");
   const handleAtrasIconoClick = () => {
     navigate("/create-certificate");
   };
@@ -18,16 +24,29 @@ const CertificateDetails = () => {
   const handleContinuarClick = () => {
     navigate("/incident-tracking");
   };
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-  // const showModal = () => {
-  //   setIsModalOpen(true);
+
+  useEffect(() => {
+    dispatch(getResume());
+  }, [dispatch]);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  // const showModal = async () => {
+  //   try {
+  //     const res = await certificatesService.getResume();
+  //     setResumeText(res.resumen);
+  //     setIsModalOpen(true);
+  //   } catch (error) {
+  //     console.error("Error fetching data from the API", error);
+  //   }
   // };
-  // const handleOk = () => {
-  //   setIsModalOpen(false);
-  // };
-  // const handleCancel = () => {
-  //   setIsModalOpen(false);
-  // };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <Header />
@@ -54,11 +73,14 @@ const CertificateDetails = () => {
       </div>
       <div className="listen-certificate-button">
         <div className="icon-container">
-          <h5 className="listen-certificate-title">Escuchar acta</h5>
+          <h5 className="listen-certificate-title">
+            Escuchar <br />
+            acta
+          </h5>
           <img src={iconoAltavoz} alt="iconoAltavoz" className="iconoAltavoz" />
         </div>
       </div>
-      <div className="resume-button">
+      <div className="resume-button" onClick={showModal}>
         <div className="icon-container">
           <h5 className="resume-title">Ver acta resumida</h5>
           <img src={iconoArchivo} alt="iconoArchivo" className="iconoArchivo" />
@@ -66,7 +88,10 @@ const CertificateDetails = () => {
       </div>
       <div className="listen-resume-button">
         <div className="icon-container">
-          <h5 className="listen-resume-title">Escuchar resumen</h5>
+          <h5 className="listen-resume-title">
+            Escuchar <br />
+            resumen
+          </h5>
           <img src={iconoAltavoz} alt="iconoAltavoz" className="iconoAltavoz" />
         </div>
       </div>
@@ -75,24 +100,18 @@ const CertificateDetails = () => {
           Crear acta
         </span>
       </div>
-
-      {/* 
-      <Button type="secundary" onClick={showModal}>
-        Open Modal
-      </Button>
       <Modal
         title="Resumen de acta"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
         okButtonProps={{ style: { backgroundColor: "#627b90" } }}
+        style={{ top: "200px" }}
       >
-        <p>
-          Aprobación de las cuentas del ejercicio anterior y del presupuesto
-          para el presente año. Propuesta de instalación of un ascensor in el
-          edificio. Ruegos y preguntas. Se abre la sesión a las 19:15 horas.
+        <p style={{ textAlign: "justify", marginBottom: "20px" }}>
+          {resumeText?.resumen}
         </p>
-      </Modal> */}
+      </Modal>
     </div>
   );
 };

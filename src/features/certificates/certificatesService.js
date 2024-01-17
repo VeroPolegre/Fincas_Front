@@ -17,16 +17,16 @@ const uploadFile = async (formData) => {
 
 const getResume = async (data) => {
   try {
-    const res = await axios.get(`${API_URL}/resumen` + data);
-    return res.resumen;
+    const res = await axios.get(`${API_URL}/resumen`, data, {});
+    return res;
   } catch (error) {
     throw error;
   }
 };
 
-const getAudio = async (base64) => {
+const getAudio = async (data) => {
   try {
-    const res = await axios.get(`${API_URL}/audio` + data);
+    const res = await axios.get(`${API_URL}/audio`, data, {});
     return res;
   } catch (error) {
     throw error;

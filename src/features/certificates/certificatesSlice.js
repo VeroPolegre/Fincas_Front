@@ -5,11 +5,10 @@ const initialState = {
   uploading: false,
   uploadError: null,
   uploadResult: null,
-  // loading: false,
-  // imageUrl: "",
-  // isError: false,
-  // isSuccess: false,
-  // message: "",
+  resumeText: null,
+  isError: false,
+  isSuccess: false,
+  message: "",
 };
 
 export const certificatesSlice = createSlice({
@@ -32,16 +31,19 @@ export const certificatesSlice = createSlice({
       .addCase(uploadFile.fulfilled, (state, action) => {
         state.uploading = false;
         state.uploadResult = action.payload;
-        // state.isSuccess = true;
-        // state.message = action.payload.message;
-        // state.imageUrl = action.payload.imageUrl;
+        state.isSuccess = true;
+        state.message = action.payload.message;
       })
       .addCase(uploadFile.rejected, (state, action) => {
         state.uploading = false;
         state.uploadError = action.error.message;
-        // state.isError = true;
-        // state.message = action.payload;
-      });
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(getResume.fulfilled, (state, action) => {
+        state.resumeText = action.payload.data;
+      })
+      .addCase(getResume.rejected, (state, action) => {});
   },
 });
 
@@ -52,6 +54,22 @@ export const uploadFile = createAsyncThunk(
   async (file, thunkAPI) => {
     try {
       const res = await certificatesService.uploadFile(file);
+      return res;
+    } catch (error) {
+      console.error(error);
+      return thunkAPI.rejectWithValue({
+        errorMessage: error.message,
+        status: error.status,
+      });
+    }
+  }
+);
+
+export const getResume = createAsyncThunk(
+  "certificates/getResume",
+  async (data, thunkAPI) => {
+    try {
+      const res = await certificatesService.getResume(data);
       return res;
     } catch (error) {
       console.error(error);
