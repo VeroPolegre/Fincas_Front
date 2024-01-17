@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const HomeAdmin = () => {
   const navigate = useNavigate();
   const handleCreateIncidentClick = () => {
-    navigate("/create-certificate");
+    navigate("/search-comunity");
   };
   return (
     <>
