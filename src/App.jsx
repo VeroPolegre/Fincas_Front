@@ -21,7 +21,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Register />}>
+          <Route path="/" element={<Login />}>
             {" "}
           </Route>
           <Route path="/login" element={<Login />}>
