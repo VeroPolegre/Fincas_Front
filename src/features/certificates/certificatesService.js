@@ -17,7 +17,11 @@ const uploadFile = async (formData) => {
 
 const getResume = async (data) => {
   try {
-    const res = await axios.get(`${API_URL}/resumen`, data, {});
+    const res = await axios.get(`${API_URL}/resumen`, data, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     return res;
   } catch (error) {
     throw error;
@@ -26,7 +30,12 @@ const getResume = async (data) => {
 
 const getAudio = async (data) => {
   try {
-    const res = await axios.get(`${API_URL}/audio`, data, {});
+    const res = await axios.get(`${API_URL}/audio`, data, {
+      headers: {
+        "Content-Type": "audio/mp3",
+        "Content-Disposition": "attachment; filename=Acta_comunidad.pdf.mp3",
+      },
+    });
     return res;
   } catch (error) {
     throw error;

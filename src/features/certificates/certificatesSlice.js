@@ -6,6 +6,7 @@ const initialState = {
   uploadError: null,
   uploadResult: null,
   resumeText: null,
+  resumeAudio: null,
   isError: false,
   isSuccess: false,
   message: "",
@@ -43,7 +44,11 @@ export const certificatesSlice = createSlice({
       .addCase(getResume.fulfilled, (state, action) => {
         state.resumeText = action.payload.data;
       })
-      .addCase(getResume.rejected, (state, action) => {});
+      .addCase(getResume.rejected, (state, action) => {})
+      .addCase(getAudio.fulfilled, (state, action) => {
+        state.resumeAudio = action.payload.data;
+      })
+      .addCase(getAudio.rejected, (state, action) => {});
   },
 });
 
@@ -70,6 +75,21 @@ export const getResume = createAsyncThunk(
   async (data, thunkAPI) => {
     try {
       const res = await certificatesService.getResume(data);
+      return res;
+    } catch (error) {
+      console.error(error);
+      return thunkAPI.rejectWithValue({
+        errorMessage: error.message,
+        status: error.status,
+      });
+    }
+  }
+);
+export const getAudio = createAsyncThunk(
+  "certificates/getAudio",
+  async (data, thunkAPI) => {
+    try {
+      const res = await certificatesService.getAudio(data);
       return res;
     } catch (error) {
       console.error(error);
