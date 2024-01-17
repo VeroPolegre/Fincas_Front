@@ -3,6 +3,7 @@ import "./Incidents.scss";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import grieta from "../../assets/grieta.jpg";
+import fotoBombilla from "../../assets/fotoBombilla.png"
 import iconoBaja from "../../assets/iconoBaja.png";
 import icono1 from "../../assets/icono1.png";
 import icono2 from "../../assets/icono2.png";
@@ -33,7 +34,7 @@ const Incidents = () => {
         <h1 className="incident-title">Incidencia #1</h1>
         <h3 className="incident-date">19/01/2024</h3>{" "}
         <div className="image-container">
-          <img src={grieta} alt="grieta" className="rounded-image" />
+          <img src={fotoBombilla} alt="fotoBombilla" className="rounded-image" />
         </div>
       </div>
       <div className="floor-container">
