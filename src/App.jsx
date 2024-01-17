@@ -1,13 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./fonts.scss";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import CreateCertificate from "./pages/CreateCertificate/CreateCertificate";
 import CreateIncident from "./pages/CreateIncident/CreateIncident";
 import HomeUser from "./pages/HomeUser/HomeUser";
-import "./fonts.scss";
 import Incidents from "./pages/Incidents/Incidents";
 import IncidentConfirmation from "./pages/IncidentConfirmation/IncidentConfirmation";
 import IncidentTracking from "./pages/IncidentTracking/IncidentTracking";
@@ -66,7 +66,10 @@ function App() {
           <Route path="/search-comunity" element={<SearchComunity />}>
             {" "}
           </Route>
-          <Route path="/search-comunity-detail" element={<SearchComunityDetail />}>
+          <Route
+            path="/search-comunity-detail"
+            element={<SearchComunityDetail />}
+          >
             {" "}
           </Route>
         </Routes>

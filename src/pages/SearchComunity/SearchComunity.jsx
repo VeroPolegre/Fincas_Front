@@ -29,7 +29,6 @@ const SearchComunity = () => {
       <div className="create-certificate-search-container">
         <h1 className="search-confirmation-title">Crear acta</h1>
         <h3 className="search-confirmation-subtitle">Indica la comunidad</h3>
-
         <form className="form-register">
           <div className="custom-label-input">
             <div className="input-with-icon">

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* set base values */
 $main-type: "Montserrat", sans-serif;
 $text-base-size: 1em;
 $text-scale-ratio: 0.5;
@@ -15,61 +14,3 @@ $text-xxxl: calc($text-base-size * ($text-scale-ratio * 6));
 * {
   font-family: $main-type;
 }
-
-// h1 {
-//   font-family: $main-type;
-//   font-size: $text-xxl;
-//   font-weight: 600;
-// }
-
-// h2 {
-//   font-family: $main-type;
-//   font-size: $text-xl;
-//   font-weight: 600;
-// }
-
-// h3 {
-//   font-family: $main-type;
-//   font-size: $text-lg;
-//   font-weight: 600;
-// }
-
-// h4 {
-//   font-family: $main-type;
-//   font-size: $text-md;
-//   font-weight: 600;
-// }
-
-// h5 {
-//   font-size: $text-sm;
-//   font-weight: 500;
-// }
-
-// h6 {
-//   font-family: $main-type;
-//   font-size: $text-xs;
-//   font-weight: 500;
-// }
-
-// p {
-//   font-family: $main-type;
-//   font-size: $text-xs;
-//   font-weight: 300;
-// }
-
-// .italic {
-//   font-style: italic;
-//   font-variation-settings: "ital" 1;
-// }
-
-// .bold {
-//   font-weight: 700;
-// }
-
-// .semi-bold {
-//   font-weight: 600;
-// }
-
-// .light {
-//   font-weight: 200;
-// }

@@ -10,7 +10,6 @@ const IncidentTracking = () => {
     <>
       <Header />
       <h1>Seguimiento</h1>
-
       <div className="tracking-container">
         <div className="image-tracking-container">
           <img
@@ -39,15 +38,14 @@ const IncidentTracking = () => {
           <h5 className="day-repair-tracking">Día previsto 21/01/2024</h5>
         </div>
       </div>
-
       <div className="floor-tracking-container">
         <img src={iconoBerto} alt="iconoBerto" className="iconoBerto" />
       </div>
       <div className="text-provider-container">
-      <h3 className="official-provider-tracking">Proveedor oficial</h3>
-      <h4 className="name-provider-tracking">Berto Romero Tomás</h4>
-      <h4 className="tfn-provider-tracking">650 344 109</h4>
-      <h4 className="email-provider-tracking">b.romeroto@gmail.com</h4>
+        <h3 className="official-provider-tracking">Proveedor oficial</h3>
+        <h4 className="name-provider-tracking">Berto Romero Tomás</h4>
+        <h4 className="tfn-provider-tracking">650 344 109</h4>
+        <h4 className="email-provider-tracking">b.romeroto@gmail.com</h4>
       </div>
     </>
   );

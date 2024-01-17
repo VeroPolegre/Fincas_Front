@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import iconoCasa from "../../../assets/iconoCasa.png";
 import iconoLupa from "../../../assets/iconoLupa.png";
 import iconoInfo from "../../../assets/iconoInfo.png";
@@ -14,7 +14,7 @@ import { logout } from "../../../features/auth/authSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();  // Use useNavigate to get the navigate function
+  const navigate = useNavigate(); // Use useNavigate to get the navigate function
 
   const { user } = useSelector((state) => state.auth);
   const currentPath = window.location.pathname;
@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/login");  // Use navigate to go to "/login" after logout
+    navigate("/login"); // Use navigate to go to "/login" after logout
   };
 
   return (

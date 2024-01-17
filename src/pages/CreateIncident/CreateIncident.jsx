@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "../../components/Header/Header";
 import "./CreateIncident.scss";
 import { setImage, clearImage } from "../../features/incidents/incidentsSlice";
-
 import iconoCamara from "../../assets/iconoCamara.png";
 import iconoGallery from "../../assets/iconoGallery.png";
 import iconoText from "../../assets/iconoText.png";
@@ -11,7 +10,6 @@ import iconoAudio from "../../assets/iconoAudio.png";
 import iconoCall from "../../assets/iconoCall.png";
 import { useNavigate } from "react-router-dom";
 import incidentsService from "../../features/incidents/incidentsService";
-import iconoInfo from "../../assets/iconoInfo.png"
 
 const CreateIncident = () => {
   const dispatch = useDispatch();

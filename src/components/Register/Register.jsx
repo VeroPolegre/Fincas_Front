@@ -63,9 +63,9 @@ const Register = () => {
     }
     if (!password) {
       validationErrors.password = "Introduzca una contraseña";
-    } else if (password.length < 6) {
+    } else if (password.length < 10) {
       validationErrors.password =
-        "La contraseña debe contener al menos 6 caracteres";
+        "La contraseña debe contener al menos 10 caracteres";
     }
     if (!password2) {
       validationErrors.password2 = "Porfavor, repita su contraseña";
@@ -88,9 +88,6 @@ const Register = () => {
   return (
     <form onSubmit={onSubmit} className="form-register">
       <div className="custom-label-input">
-        {/* <label htmlFor="nameFormRegister" className="material-symbols-outlined">
-          nombre
-        </label> */}
         <input
           type="text"
           name="name"
@@ -102,9 +99,6 @@ const Register = () => {
         {errors.name && <p>{errors.name}</p>}
       </div>
       <div className="custom-label-input">
-        {/* <label htmlFor="surnameFormRegister" className="material-symbols-outlined">
-          apellido
-        </label> */}
         <input
           type="text"
           name="surname"
@@ -116,9 +110,6 @@ const Register = () => {
         {errors.surname && <p>{errors.surname}</p>}
       </div>
       <div className="custom-label-input">
-        {/* <label htmlFor="surnameFormRegister" className="material-symbols-outlined">
-          correo electrónico
-        </label> */}
         <input
           type="email"
           name="email"
@@ -131,12 +122,6 @@ const Register = () => {
       </div>
 
       <div className="custom-label-input">
-        {/* <label
-          htmlFor="passwordFormRegister"
-          className="material-symbols-outlined"
-        >
-          contraseña
-        </label> */}
         <input
           type="password"
           name="password"
@@ -148,12 +133,6 @@ const Register = () => {
         {errors.password && <p>{errors.password}</p>}
       </div>
       <div className="custom-label-input">
-        {/* <label
-          htmlFor="passwordFormRegister"
-          className="material-symbols-outlined"
-        >
-          repetir contraseña
-        </label> */}
         <input
           type="password"
           name="password2"

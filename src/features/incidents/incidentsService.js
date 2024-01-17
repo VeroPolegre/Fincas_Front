@@ -1,14 +1,11 @@
 import axios from "axios";
 
 const API_URL = "https://fincas-back-dev-kgax.1.us-1.fl0.io/incidents";
-const uploadImage = async (imageFile) => {
+
+const uploadImage = async (formData) => {
   try {
-    const formData = new FormData();
-    formData.append("image", imageFile);
-
     const res = await axios.post(`${API_URL}/upload`, formData);
-
-    return res.data.imageUrl;
+    return res.data;
   } catch (error) {
     console.error("Error uploading image:", error);
     throw error;
