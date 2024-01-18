@@ -3,13 +3,13 @@
  
   <h1 align="center" id="top">Fincas Vlc - Front end</h1>
 
-## 1. Introduction
+## Deveolpment
 
 This project is a database designed with well-defined relationships between tables, and a subsequently developed REST API that meet the next objectives and specified requirements for the management of the Consejo General de Colegios de Administradores de Fincas, with Node.js and Express technologies, coupled with MongoDB/Mongoose within robust REST API for an online management application.
 
 Opted in the Model-View-Controller (MVC) pattern in structuring our project it is driven to achieve an efficient and visually organized application. The MVC architecture divides our system into three key components: the Model, responsible for managing data and implementing business logic; the View, handling visual representation and user interface; and the Controller, managing control logic and user interaction.
 
-## User Benefits
+## ⚡ Objectives 
 
 - Admin area: Administrators possess the capability to efficiently manage users and create certificates. 
 
@@ -20,11 +20,15 @@ Opted in the Model-View-Controller (MVC) pattern in structuring our project it i
 - Efficiency through Automation: Administrative tasks are automated, enabling administrators and users to save valuable time and resources. This automation allows them to focus on creating memorable events and enhancing overall efficiency.
 
 
-## 1. 🚀 Structure
-The choice to structure our project using the Model-View-Controller (MVC) pattern is based on the pursuit of an efficient and visually organized approach for our application. MVC divides the application into three core components: the Model, responsible for data management and business logic; the View, handling visual representation and the user interface; and the Controller, managing control logic and user interaction. This separation of responsibilities not only simplifies collaborative development but also enhances maintainability by enabling developers to work on specific parts of the project without affecting the whole. Furthermore, it facilitates code reuse, potentially speeding up development, and ensures that the application is scalable and adaptable as it evolves, resulting in a more robust and visually appealing final product. Ultimately, the choice of MVC contributes to a more efficient and successful development experience for our project.
+## 🚀 Structure
+The choice to structure our project using the Model-View-Controller (MVC) pattern is based on the pursuit of an efficient and visually organized approach for our application. MVC divides the application into three core components: the Model, responsible for data management and business logic; the View, handling visual representation and the user interface; and the Controller, managing control logic and user interaction. 
+
+This separation of responsibilities not only simplifies collaborative development but also enhances maintainability by enabling developers to work on specific parts of the project without affecting the whole. Furthermore, it facilitates code reuse, potentially speeding up development, and ensures that the application is scalable and adaptable as it evolves, resulting in a more robust and visually appealing final product. 
+
+Ultimately, the choice of MVC contributes to a more efficient and successful development experience for our project.
 
 
-## 2. ⬇️ Installation
+## ⬇️ Installation
 
 ### Front-end dependencies
 
@@ -109,11 +113,11 @@ npm install nodemon -D
 
 ```
 
-## 3. 🧪 Usage
+## 🧪 Usage
 
 Once you have installed the main and secondary dependencies in your project, you can start using the Eventum Front end. Here are the basic steps for using it:
 
-### 3.1. Start the Server
+### Start the Server
 
 ```
 npm start
@@ -123,7 +127,7 @@ This command will start the server and get it up and running. Make sure the serv
 
 If you need more information about the API **(Back-end)**, feel free to visit our [Postman documentation](https://grey-meadow-86508.postman.co/workspace/poppaBack~40055b61-3f05-4b79-852e-054c752905f0/collection/28231572-60a28a80-ae6a-46a1-a63b-db457685977e?action=share&creator=28231572&active-environment=28231572-0744ac4e-249a-4509-8a21-792b6de4c867).
 
-## 4. ⚙️ Configuration
+## ⚙️ Configuration
 
 #### 1-Create a new React project: Use Create React App or set up manually.
 #### 2-Install Redux dependencies: Run npm install redux react-redux redux-thunk.
@@ -137,11 +141,11 @@ If you need more information about the API **(Back-end)**, feel free to visit ou
 #### 10-Test and Deploy: Write tests, build for production, and deploy to a hosting server or platform.
 
 
-### 4.1 🎯 Credentials
+### 🎯 Credentials
 
 The project must have an .env file, which will contain all the environment variables used for both database connection and project deployment configuration. Among our files, you will find an example.env file that you can use as a template to input your own data if you wish to continue the development of this project.
 
-## 5. ⚔️ Scrum Methodology
+## ⚔️ Scrum Methodology
 
 1. **Adopting Agile Methodology:** Our project management approach is rooted in the principles of agility.
 2. **Following Scrum Practices:** Specifically, Scrum methodology.
@@ -154,10 +158,10 @@ The project must have an .env file, which will contain all the environment varia
 9. **Adaptability:** Scrum promotes adaptation based on feedback, fostering flexibility in our approach.
 10. **Continuous Enhancement:** Our primary focus is to deliver incremental value and perpetually refining our methodologies.
 
-## 6. 🖥️ Admin and user flow 
+## 🖥️ Admin and user flow 
 
 
-## 7. 💭 FAQ
+## 💭 FAQ
 
 ## Frequently Asked Questions (Front End)
 
@@ -206,7 +210,7 @@ If you encounter specific issues or have questions related to your React and Red
 To deploy your React and Redux application to a production server, you'll need to build your app for production using `npm run build` and then configure the deployment to a hosting platform like Netlify, Vercel, or AWS. Ensure that production configurations are correctly set in the `.env` file and the backend is configured for production use.
 
 
-## 8. 🖊️ Useful links
+## 🖊️ Useful links
 
 #### [React Official Documentation](https://legacy.reactjs.org/docs/getting-started.html)
 #### [Redux Official Documentation](https://redux.js.org/)
@@ -214,7 +218,7 @@ To deploy your React and Redux application to a production server, you'll need t
 #### [MongoDB download](https://cloud.mongodb.com/)
 
 
-## 9. ⭐️ Credits
+## ⭐️ Credits
 
 **Special thanks to the all Team**
 
@@ -246,7 +250,7 @@ To deploy your React and Redux application to a production server, you'll need t
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/1203/1203887.png">
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/7514/7514332.png">
 
-## 10. 🤝 Contribution
+## 🤝 Contribution
 
 The open source community thrives on contributions, which elevate it into an extraordinary space for learning, inspiring, and innovating. 
 
@@ -259,7 +263,7 @@ Your contributions are sincerely valued. If you have any suggestions to improve 
 5. Open a Pull Request
 
 
-## 11. ⭐️ FULL STACK TEAM 
+## ⭐️ FULL STACK TEAM 
 
 <table>
   <tr>
