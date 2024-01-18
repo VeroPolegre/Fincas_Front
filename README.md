@@ -4,50 +4,27 @@
   <h1 align="center" id="top">Fincas Vlc - Front end</h1>
 
 ## 1. Introduction
-This project is a database designed with well-defined relationships between tables, and a subsequently developed REST API that meet the next objectives and specified requirements for the management of the Consejo General de Colegios de Administradores de Fincas, with Node.js and Express technologies, coupled with MongoDB/Mongoose, a robust REST API for an online management application.
-Opted for the Model-View-Controller (MVC) pattern in structuring our project, driven by the aim of achieving an efficient and visually organized application. The MVC architecture divides our system into three key components: the Model, responsible for managing data and implementing business logic; the View, handling visual representation and user interface; and the Controller, managing control logic and user interaction.
+
+This project is a database designed with well-defined relationships between tables, and a subsequently developed REST API that meet the next objectives and specified requirements for the management of the Consejo General de Colegios de Administradores de Fincas, with Node.js and Express technologies, coupled with MongoDB/Mongoose within robust REST API for an online management application.
+
+Opted in the Model-View-Controller (MVC) pattern in structuring our project it is driven to achieve an efficient and visually organized application. The MVC architecture divides our system into three key components: the Model, responsible for managing data and implementing business logic; the View, handling visual representation and user interface; and the Controller, managing control logic and user interaction.
 
 ## User Benefits
 
-- Improved Accessibility: Participants have easy access to event information, reducing friction in the registration process.
+- Admin area: Administrators possess the capability to efficiently manage users and create certificates. 
 
-- Engaging Experiences: Attendees benefit from interactive event features, fostering engagement and networking opportunities.
-
-- Data-Driven Decisions: Data analytics empower organizers to refine event strategies, ensuring they meet participant expectations.
-
-- Enhanced Efficiency: Organizers can save time and resources by automating administrative tasks, allowing them to focus on creating memorable events. 
-
-- We have implemented qrcode in our project to generate QR codes easily and quickly. qrcode is a Node.js library that allows creating QR codes in various output formats, such as PNG or SVG, as well as directly in the console.
-
-- **Admin area**: We have implemented a real-time dashboard that updates as clients arrive. This dynamic dashboard provides up-to-the-minute information and automatically adjusts as new clients join the system.
-
-
-
-  <img src="#"> </img>
+- Management and Certificate Creation: Leveraging collaboration with full-stack and data teams, the platform facilitates the conversion of certificates into PDFs for a professional resume format. Additionally, the system ensures accessibility by generating audio versions of certificates.
   
+- User area: In the user area, participants have the functionality to upload and report incidents, ensuring a transparent and responsive approach to addressing any issues that may arise.
+
+- Efficiency through Automation: Administrative tasks are automated, enabling administrators and users to save valuable time and resources. This automation allows them to focus on creating memorable events and enhancing overall efficiency.
 
 
-## Index
-1. [Structure](#structure)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Configuration](#configuration)
-5. [Status](#status)
-6. [Flow](#flow)
-7. [FAQ](#faq)
-8. [Relevant Links](#relevant-links)
-9. [Credits](#Credits)
-10. [Contribution](#contribution)
-11. [ Development made by](#Developmentmadeby)
-
-
-
-## 1. Structure
+## 1. 🚀 Structure
 The choice to structure our project using the Model-View-Controller (MVC) pattern is based on the pursuit of an efficient and visually organized approach for our application. MVC divides the application into three core components: the Model, responsible for data management and business logic; the View, handling visual representation and the user interface; and the Controller, managing control logic and user interaction. This separation of responsibilities not only simplifies collaborative development but also enhances maintainability by enabling developers to work on specific parts of the project without affecting the whole. Furthermore, it facilitates code reuse, potentially speeding up development, and ensures that the application is scalable and adaptable as it evolves, resulting in a more robust and visually appealing final product. Ultimately, the choice of MVC contributes to a more efficient and successful development experience for our project.
 
 
-## 2. Installation
-
+## 2. ⬇️ Installation
 
 ### Front-end dependencies
 
@@ -121,15 +98,6 @@ Sass is a CSS preprocessor that extends the capabilities of regular CSS. It adds
 npm install sass
 ```
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-<h1>
-
-  <img src="#"> </img>
-  
-</h1>
 
 ### 2.3 .Development Dependencies
 
@@ -141,17 +109,7 @@ npm install nodemon -D
 
 ```
 
-<h1>
-
-  <img src="#"> </img>
-  
-</h1>
-
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-## 3. Usage
+## 3. 🧪 Usage
 
 Once you have installed the main and secondary dependencies in your project, you can start using the Eventum Front end. Here are the basic steps for using it:
 
@@ -165,11 +123,7 @@ This command will start the server and get it up and running. Make sure the serv
 
 If you need more information about the API **(Back-end)**, feel free to visit our [Postman documentation](https://grey-meadow-86508.postman.co/workspace/poppaBack~40055b61-3f05-4b79-852e-054c752905f0/collection/28231572-60a28a80-ae6a-46a1-a63b-db457685977e?action=share&creator=28231572&active-environment=28231572-0744ac4e-249a-4509-8a21-792b6de4c867).
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-## 4. Configuration
+## 4. ⚙️ Configuration
 
 #### 1-Create a new React project: Use Create React App or set up manually.
 #### 2-Install Redux dependencies: Run npm install redux react-redux redux-thunk.
@@ -183,17 +137,11 @@ If you need more information about the API **(Back-end)**, feel free to visit ou
 #### 10-Test and Deploy: Write tests, build for production, and deploy to a hosting server or platform.
 
 
-### 4.1 Credentials
+### 4.1 🎯 Credentials
 
 The project must have an .env file, which will contain all the environment variables used for both database connection and project deployment configuration. Among our files, you will find an example.env file that you can use as a template to input your own data if you wish to continue the development of this project.
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-## 5. Status
-
-#### Scrum Methodology
+## 5. ⚔️ Scrum Methodology
 
 1. **Adopting Agile Methodology:** Our project management approach is rooted in the principles of agility.
 2. **Following Scrum Practices:** Specifically, Scrum methodology.
@@ -206,20 +154,10 @@ The project must have an .env file, which will contain all the environment varia
 9. **Adaptability:** Scrum promotes adaptation based on feedback, fostering flexibility in our approach.
 10. **Continuous Enhancement:** Our primary focus is to deliver incremental value and perpetually refining our methodologies.
 
-## 6. Flow 
-
-<h1>
-
-  <img src="#"> </img>
-  
-</h1>
+## 6. 🖥️ Admin and user flow 
 
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-## 7. FAQ
+## 7. 💭 FAQ
 
 ## Frequently Asked Questions (Front End)
 
@@ -268,22 +206,15 @@ If you encounter specific issues or have questions related to your React and Red
 To deploy your React and Redux application to a production server, you'll need to build your app for production using `npm run build` and then configure the deployment to a hosting platform like Netlify, Vercel, or AWS. Ensure that production configurations are correctly set in the `.env` file and the backend is configured for production use.
 
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
-
-## 8. Relevant links
+## 8. 🖊️ Useful links
 
 #### [React Official Documentation](https://legacy.reactjs.org/docs/getting-started.html)
 #### [Redux Official Documentation](https://redux.js.org/)
 #### [NodeJS download](https://nodejs.org/es/download)
 #### [MongoDB download](https://cloud.mongodb.com/)
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
 
-## 9. Credits
+## 9. ⭐️ Credits
 
 **Special thanks to the all Team**
 
@@ -305,10 +236,9 @@ To deploy your React and Redux application to a production server, you'll need t
 
 # Overview UX/UI:
 
-
 - Interface interaction and Design.
 - Ideation and conceptualization: We brainstorm ideas and conceptualize user interfaces.
-- Conduct user research to gain insights into user needs and preferences.
+- Conduct client research to gain insights into user needs and preferences.
 - Focus on designing interactions and interfaces that enhance user experiences.
 
 <img align="center" height="50" width="50" src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Figma-1-logo.png">
@@ -316,54 +246,20 @@ To deploy your React and Redux application to a production server, you'll need t
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/1203/1203887.png">
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/7514/7514332.png">
 
+## 10. 🤝 Contribution
 
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
+The open source community thrives on contributions, which elevate it into an extraordinary space for learning, inspiring, and innovating. 
 
-## 10. Contribution
+Your contributions are sincerely valued. If you have any suggestions to improve it, please consider forking the repository and initiating a pull request. Alternatively, you can easily open an issue labeled "enhancement." And, remember to show your support for the project by giving it a star! Thank you!
 
-We welcome contributions from the community to help improve Eventum. If you wish to contribute, please follow these guidelines:
-
-1. **Fork the Repository**
-
-   To get started, fork the Eventum repository to your GitHub account. This will create a copy of the project that you can freely experiment with.
-
-2. **Clone the Repository**
-
-   Clone your forked repository to your local development environment using the following command (replace `[your_username]` with your GitHub username):
-
-   ```
-   git clone https://github.com/[your_username]/Fincas_Front.git
-   ```
-
-**Create a new branch**
-Before making any changes, create a new branch for your contribution. This helps keep the main branch clean and allows for a focused contribution:
-
-```
-git checkout -b my-contribution
-```
-
-**Make Changes and Commit**
-Make the necessary changes or additions to the codebase. Once you're satisfied with your changes, commit them using descriptive commit messages:
-
-```
-git commit -m "Add feature: [your feature description]"
-```
-
-**Push to Your Fork**
-Push your changes to your forked repository on GitHub:
-
-```
-git push origin my-contribution
-```
-
-<div align="right">
-  <a href="#top">↑ Back to the top</a>
-</div>
+1. Fork Fincas_Front
+2. Create your Feature Branch (`git checkout -b feature/YourName`)
+3. Commit your Changes (`git commit -m 'Add some YourName'`)
+4. Push to the Branch (`git push origin feature/YourName`)
+5. Open a Pull Request
 
 
-## 11. FULL STACK TEAM 😁🚀
+## 11. ⭐️ FULL STACK TEAM 
 
 <table>
   <tr>
