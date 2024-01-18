@@ -3,7 +3,7 @@
  
   <h1 align="center" id="top">Fincas Vlc - Front end</h1>
 
-## Deveolpment
+## <h2><samp> 💬 Introduction  </samp></h2>
 
 This project is a database designed with well-defined relationships between tables, and a subsequently developed REST API that meet the next objectives and specified requirements for the management of the Consejo General de Colegios de Administradores de Fincas, with Node.js and Express technologies, coupled with MongoDB/Mongoose within robust REST API for an online management application.
 
