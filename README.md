@@ -228,9 +228,6 @@ Below is a list of development dependencies used in this project along with a br
 
 ```
 npm install nodemon -D
-npm install eslint 
-npm install jest 
-npm install cypress
 
 ```
 
@@ -264,14 +261,14 @@ If you need more information about the API **(Back-end)**, feel free to visit ou
 
 ## 4. Configuration
 
-#### 1 -Create a new React project: Use Create React App or set up manually.
+#### 1-Create a new React project: Use Create React App or set up manually.
 #### 2-Install Redux dependencies: Run npm install redux react-redux redux-thunk.
 #### 3-Configure the Redux Store: Create a store to manage global state.
 #### 4-Create Reducers: Define reducers to update state with actions.
 #### 5-Create Actions: Design actions to dispatch events that modify state.
 #### 6-Connect components: Utilize the connect function to link components to the Redux store.
 #### 7-Define Routes: Set up routes using react-router-dom for navigation.
-#### 8-Style components: Apply styling using CSS or libraries like Styled Components.
+#### 8-Style components: Apply styling using SCSS or libraries like AntDesign.
 #### 9-Develop components: Build reusable React components.
 #### 10-Test and Deploy: Write tests, build for production, and deploy to a hosting server or platform.
 
@@ -288,16 +285,16 @@ The project must have an .env file, which will contain all the environment varia
 
 #### Scrum Methodology
 
-1. **Agile Approach:** We embrace an agile approach to project management.
-2. **Scrum Methodology:** Specifically, we follow the Scrum methodology.
-3. **Iterative Development:** Scrum involves iterative development cycles known as "sprints."
-4. **Cross-Functional Teams:** We form cross-functional teams to tackle tasks.
-5. **Product Backlog:** We maintain a prioritized product backlog of work items.
-6. **Sprint Planning:** Before each sprint, we conduct sprint planning meetings to select tasks.
-7. **Daily Standups:** We hold daily standup meetings for team coordination.
-8. **Review and Retrospective:** At the end of each sprint, we review the work done and hold a retrospective to improve processes.
-9. **Adaptation:** Scrum encourages adaptation based on feedback, allowing for flexibility.
-10. **Continuous Improvement:** Our focus is on delivering value incrementally and continuously improving our processes.
+1. **Adopting Agile Methodology:** Our project management approach is rooted in the principles of agility.
+2. **Following Scrum Practices:** Specifically, Scrum methodology.
+3. **Iterative Development:** Development cycles, within sprints.
+4. **Collaborative Teams::** Cross-functional teams are assembled to address various tasks.
+5. **Product Backlog:** Well-maintained product backlog ensures the prioritization of tasks.
+6. **Sprint Sessions::** Comprehensive planning meetings are conducted to select tasks.
+7. **Daily Standups:** Regular standup meetings facilitate daily coordination among team members.
+8. **Review and Reflect:** Concluding each sprint, we review completed work and engage in retrospectives to enhance our processes.
+9. **Adaptability:** Scrum promotes adaptation based on feedback, fostering flexibility in our approach.
+10. **Continuous Enhancement:** Our primary focus is to deliver incremental value and perpetually refining our methodologies.
 
 ## 6. Flow 
 
@@ -358,8 +355,7 @@ If you encounter specific issues or have questions related to your React and Red
 
 ### How do I deploy my React and Redux application to a production server?
 
-To deploy your React and Redux application to a production server, you'll need to build your app for production using `npm run build` and then configure a web server like Nginx or deploy it to a hosting platform like Netlify, Vercel, or AWS. Ensure that production configurations are correctly set in the `.env` file and the backend is configured for production use.
-
+To deploy your React and Redux application to a production server, you'll need to build your app for production using `npm run build` and then configure the deployment to a hosting platform like Netlify, Vercel, or AWS. Ensure that production configurations are correctly set in the `.env` file and the backend is configured for production use.
 
 
 <div align="right">
@@ -371,7 +367,7 @@ To deploy your React and Redux application to a production server, you'll need t
 #### [React Official Documentation](https://legacy.reactjs.org/docs/getting-started.html)
 #### [Redux Official Documentation](https://redux.js.org/)
 #### [NodeJS download](https://nodejs.org/es/download)
-#### [MySQL download](https://www.mysql.com/downloads/)
+#### [MongoDB download](https://cloud.mongodb.com/)
 
 <div align="right">
   <a href="#top">↑ Back to the top</a>
@@ -381,20 +377,19 @@ To deploy your React and Redux application to a production server, you'll need t
 
 **Special thanks to the all Team**
 
-## I want to express my profound gratitude to the entire development team, as well as every member of the design team, the talented data experts, and the dedicated cybersecurity professionals. Your collaboration and collective effort have made it possible for this project to become a reality in record time 🚀
+## Cheers to the entire development team, as well as every member of the design team and the talented data experts. Your collaborative effort has played a pivotal role in bringing this project to life in record time.
 
 --
 
 # Data Science Overview:
 
--  Data Acquisition, Analysis, Visualization: acquiring, analyzing, and visualizing data.
-- Application Development with Python and Django: The core of our applications is built using the Django framework.
+- Data Acquisition, Analysis, Visualization: acquiring, analyzing, and visualizing data.
+- Application Development with Python and Django: The core of our applications is built using the Flask framework.
 - Data: contribution to the Database.
 
 <img align="center" height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/1387/1387537.png">
 <img align="center"  height="50" width="50" src="https://cdn-icons-png.flaticon.com/128/1849/1849554.png">
 <img align="center" height="50" width="50" src="https://cdn.svgporn.com/logos/visual-studio-code.svg">
-<img align="center" height="50" width="50" src="https://i.postimg.cc/HnSbx2tG/Django-Logo-768x480.png">
 
 --
 
@@ -429,7 +424,7 @@ We welcome contributions from the community to help improve Eventum. If you wish
    Clone your forked repository to your local development environment using the following command (replace `[your_username]` with your GitHub username):
 
    ```
-   git clone https://github.com/[your_username]/Eventum.git
+   git clone https://github.com/[your_username]/Fincas_Front.git
    ```
 
 **Create a new branch**
