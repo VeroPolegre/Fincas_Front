@@ -160,6 +160,19 @@ The project must have an .env file, which will contain all the environment varia
 
 ## 🖥️ Admin and user flow 
 
+<p align="center">
+ 
+<h2><samp> User view  </samp></h2>
+
+![desafio-demo-funcional-propietario](https://github.com/VeroPolegre/Fincas_Front/assets/145065743/c7b4c950-eba7-4f13-bd72-60fa10ac9153)
+
+<p></p>
+
+<h2><samp> Admin view</samp></h2>
+
+![desafio-demo-funcional-admin](https://github.com/VeroPolegre/Fincas_Front/assets/145065743/9719aa29-6540-4bef-a7b5-2193101287b7)
+
+</p>
 
 ## 💭 FAQ
 
