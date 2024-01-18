@@ -48,7 +48,7 @@ The choice to structure our project using the Model-View-Controller (MVC) patter
 
 <img src="#"> </img> ||| <img src="#"> </img>
 
-## 2 - Installation
+## 2. Installation
 
 
 ### Front-end dependencies
@@ -80,34 +80,12 @@ Vite is a build tool and development server that is designed to make modern web 
 npm install vite
 ```
 
-**Chakra-ui/react**
+**AntDesign**
 
-@Chakra-ui/react is a popular and highly customizable component library for building user interfaces in React. It is designed to make it easy for developers to create beautiful and accessible UIs while maintaining flexibility and extensibility.
-
-```
-npm install @chakra-ui/react
-```
-**Emotion/react**
-
-@emotion/react is the core package of the Emotion library. It provides the foundational building blocks for defining and managing styles within your React components. It allows you to write CSS styles directly within your JavaScript or TypeScript code.
+AntDesign is a popular and highly customizable component library for building user interfaces in React. It is designed to make it easy for developers to create beautiful and accessible UIs while maintaining flexibility and extensibility.
 
 ```
-npm install @emotion/react
-```
-**Emotion/styled**
-
-@emotion/styled is an extension of @emotion/react that provides a more convenient and expressive way to create styled components. It simplifies the process of defining and applying styles to your components.
-
-```
-npm install @emotion/styled
-```
-
-**Nivo Chart Libraries**
-
-Nivo is a collection of powerful data visualization libraries for React that simplifies the process of creating interactive and aesthetically pleasing charts and graphs. These libraries are designed to help developers quickly and effectively present data in various visual formats. Here's a brief overview of each library.
-
-```
-npm install @nivo/bar @nivo/bump @nivo/line @nivo/pie
+npm install antd
 ```
 
 **Axios**
@@ -116,56 +94,6 @@ Axios is a popular JavaScript library that simplifies the process of making HTTP
 
 ```
 npm install axios
-```
-
-**Framer Motion**
-
-Framer Motion is a popular animation library for React applications that simplifies the process of adding smooth and interactive animations to your user interfaces. It's designed to work seamlessly with React, making it a powerful tool for creating engaging and visually appealing web and mobile applications. Here are some key features and concepts related to Framer Motion.
-
-```
-npm install framer-motion
-```
-
-**html2canvas**
-
-html2canvas is a JavaScript library that allows you to capture or "screenshot" a portion or the entirety of an HTML document, including its CSS-styled content, as a static image. This library is useful for various scenarios where you want to generate an image representation of a web page or a specific element within a page, such as creating previews, sharing content on social media, or generating PDFs.
-
-```
-npm install html2canvas
-```
-
-**jsPDF**
-
-jsPDF is a widely-used JavaScript library for generating PDF documents on the client-side. It allows you to create, modify, and save PDF files directly from your web browser, making it a versatile tool for generating reports, invoices, forms, and other PDF-based content within web applications. Here are some key features and concepts related to jsPDF.
-
-```
-npm install jspdf
-```
-
-
-**qrcode**
-
-qrcode is a JavaScript library that allows you to generate QR codes (Quick Response codes) on the client-side. QR codes are two-dimensional barcodes that can store various types of data, including URLs, text, contact information, and more. They are widely used for mobile payments, ticketing, marketing, and various other applications where quick and easy access to information is important.
-
-```
-npm install qrcode
-```
-
-
-**html5-qrcode**
-
-html5-qrcode is a JavaScript library that simplifies the process of working with QR code scanning in web applications. It provides an easy way to integrate QR code scanning functionality into your web application, allowing users to use their device's camera to scan QR codes and extract information from them.
-
-```
-npm install html5-qrcode
-```
-
-**react-datetime**
-
-react-datetime is a JavaScript library for rendering and managing date and time inputs in React applications. It provides a set of highly customizable and user-friendly date and time pickers that can be easily integrated into your web forms and user interfaces. Here are some key features and concepts related to react-datetime.
-
-```
-npm install react-datetime
 ```
 
 
@@ -185,22 +113,6 @@ react-router-dom is a popular JavaScript library for adding client-side routing 
 ```
 npm install react-router-dom
 
-```
-
-**react-icons**
-
-react-icons is a popular library for easily including a wide variety of icons in React applications. It provides a collection of high-quality, customizable icon sets that you can use to enhance the user interface and user experience of your web or mobile applications. Here are some key features and concepts related to react-icons.
-
-```
-npm install react-icons
-```
-
-**react-use-websocket**
-
-react-use-websocket is a library for managing WebSocket connections in React applications. WebSocket is a communication protocol that enables two-way communication between a client (typically a web browser) and a server over a single, long-lived connection. This library simplifies the process of integrating WebSocket functionality into your React components. Here are some key features and concepts related to react-use-websocket.
-
-```
-npm install react-use-websocket
 ```
 
 **Sass - (Syntactically Awesome Stylesheets)**
